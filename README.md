@@ -24,5 +24,6 @@ Scope(s): None (application is not using authentication)
 >Steps to reproduce: Use the API Console, https://developer.spotify.com/web-api/console/get-users-profile/?user_id=%5E
 
 >Expected behaviour: A public user object as described on https://developer.spotify.com/web-api/object-model/#user-object-public. 
-Actual behaviour: 500 Server Error (consistently)
+
+>Actual behaviour: 500 Server Error (consistently)
 
