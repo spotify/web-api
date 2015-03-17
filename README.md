@@ -1,5 +1,7 @@
 ### Spotify's Web API 
-The purpose of this repository is to work as the public issue tracker for [Spotify's Web API](https://developer.spotify.com/web-api). If you've found a bug in the API, or have ideas on how we could improve it, please [create an issue](https://www.github.com/spotify/web-api/issues). It's greatly appreciated.
+The purpose of this repository is to work as the public issue tracker for [Spotify's Web API](https://developer.spotify.com/web-api). If you've found a bug in the API, or have ideas on how we could improve it, please [create an issue](https://www.github.com/spotify/web-api/issues). It's greatly appreciated. 
+
+If you have ideas, bug reports, or any other type of feedback to Spotify that doesn't relate to the Web API, please submit these at [Spotify's Community forums](https://community.spotify.com/).
 
 For bugs and features related to the mobile SDKs, please visit the repositories for the [Android SDK](https://github.com/spotify/android-sdk/) or the [iOS SDK](https://github.com/spotify/ios-sdk/).
 
