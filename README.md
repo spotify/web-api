@@ -1,7 +1,7 @@
 ### Spotify's Web API
 The purpose of this repository is to work as the public issue tracker for [Spotify's Web API](https://developer.spotify.com/web-api). If you've found a bug in the API, or have ideas on how we could improve it, please [create an issue](https://www.github.com/spotify/web-api/issues). It's greatly appreciated.
 
-The repository also contains the [RAML™ specification](http://raml.org/index.html) for the Spotify Web API. RAML is a YAML-based language that describes RESTful APIs and provides all the information necessary to describe RESTful APIs, create API client-code and API server-code generators, and create API user documentation from RAML API definitions.
+The repository also contains the [RAML™ specification](https://github.com/spotify/web-api/tree/master/specifications/raml) for the Spotify Web API. [RAML](http://raml.org/index.html) is a YAML-based language that describes RESTful APIs and provides all the information necessary to describe RESTful APIs, create API client-code and API server-code generators, and create API user documentation from RAML API definitions.
 
 If you have ideas, bug reports, or any other type of feedback to Spotify that doesn't relate to the Web API, please submit these at [Spotify's Community forums](https://community.spotify.com/).
 
