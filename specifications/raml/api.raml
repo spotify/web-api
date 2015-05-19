@@ -15,19 +15,15 @@ resourceTypes:
       get?: &common
         headers:
           Accept:
-            description: Is used to set specified media type.
+            description: It is used to set specified media type.
             type: string
         responses:
-          403:
+          429:
             description: |
-              API rate limit exceeded. See http://developer.spotify.com/web-api/#rate-limiting for details.
+              API rate limit exceeded. See http://developer.spotify.com/web-api/user-guide/#rate-limiting for details.
       post?: *common
-  - item:
-      type: base
-      get?:
-  - collection:
-      type: base
-      get?:
+      put?: *common
+      delete?: *common
 securitySchemes:
   - oauth_2_0:
       description: |
@@ -46,16 +42,12 @@ securitySchemes:
               the access token has expired. You should re-authenticate the user.
           403:
             description: |
-              Bad OAuth request (wrong consumer key, bad nonce, expired
-              timestamp...). Unfortunately, re-authenticating the user won't help here.
+              Bad OAuth request (access token without necessary scope).
       settings:
         authorizationUri: https://accounts.spotify.com/authorize
         accessTokenUri: https://accounts.spotify.com/api/token
         authorizationGrants: [ code, token ]
         scopes:
-          - "playlist-read-private"
-          - "playlist-modify-public"
-          - "playlist-modify-private"
           - "user-library-read"
           - "user-library-modify"
           - "user-read-private"
@@ -64,6 +56,9 @@ securitySchemes:
           - "user-follow-read"
           - "user-follow-modify"
           - "playlist-read-collaborative"
+          - "playlist-read-private"
+          - "playlist-modify-public"
+          - "playlist-modify-private"
 traits:
   - filterable:
       queryParameters:
