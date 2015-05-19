@@ -1,0 +1,684 @@
+#%RAML 0.8
+title: Spotify Web API
+version: v1
+baseUri: https://api.spotify.com/{version}
+mediaType: application/json
+documentation:
+  - title: Spotify Web API Docs
+    content: |
+      Welcome to the _Spotify Web API_ specification. For more information about
+      how to use the API, check out [developer site](https://developer.spotify.com/web-api/).
+schemas:
+  - Playlist: !include schemas/playlist.json
+resourceTypes:
+  - base:
+      get?: &common
+        headers:
+          Accept:
+            description: Is used to set specified media type.
+            type: string
+        responses:
+          403:
+            description: |
+              API rate limit exceeded. See http://developer.spotify.com/web-api/#rate-limiting for details.
+      post?: *common
+  - item:
+      type: base
+      get?:
+  - collection:
+      type: base
+      get?:
+securitySchemes:
+  - oauth_2_0:
+      description: |
+          Spotify supports OAuth 2.0 for authenticating all API requests.
+      type: OAuth 2.0
+      describedBy:
+        headers:
+          Authorization:
+            description: |
+              Used to send a valid OAuth 2 access token.
+            type: string
+        responses:
+          401:
+            description: |
+              Bad or expired token. This can happen if the user revoked a token or
+              the access token has expired. You should re-authenticate the user.
+          403:
+            description: |
+              Bad OAuth request (wrong consumer key, bad nonce, expired
+              timestamp...). Unfortunately, re-authenticating the user won't help here.
+      settings:
+        authorizationUri: https://accounts.spotify.com/authorize
+        accessTokenUri: https://accounts.spotify.com/api/token
+        authorizationGrants: [ code, token ]
+        scopes:
+          - "playlist-read-private"
+          - "playlist-modify-public"
+          - "playlist-modify-private"
+          - "user-library-read"
+          - "user-library-modify"
+          - "user-read-private"
+          - "user-read-birthdate"
+          - "user-read-email"
+          - "user-follow-read"
+          - "user-follow-modify"
+          - "playlist-read-collaborative"
+traits:
+  - filterable:
+      queryParameters:
+        fields:
+          description: A comma-separated list of fields to filter query
+          type: string
+          example: items(added_by.id,track(name,href,album(name,href)))
+          displayName: Fields
+  - paged:
+      queryParameters:
+        limit:
+          displayName: Limit
+          description: The maximum number of items to return
+          type: integer
+          example: 10
+          minimum: 0
+          default: 20
+          maximum: 50
+          required: false
+        offset:
+          displayName: Offset
+          description: The index of the first item to return
+          type: integer
+          example: 5
+          default: 0
+          required: false
+/albums:
+  displayName: several-albums
+  get:
+    description: |
+      [Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)
+    queryParameters:
+      ids:
+        displayName: Spotify Album IDs
+        type: string
+        description: A comma-separated list of IDs
+        required: true
+        example: "382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc"
+      market:
+        displayName: Market
+        description: The market (an ISO 3166-1 alpha-2 country code)
+        type: string
+        example: ES
+        required: false
+  /{id}:
+    displayName: album
+    uriParameters:
+      id:
+        displayName: Spotify Album ID
+        type: string
+        description: The Spotify ID for the album
+        example: 4aawyAB9vmqN3uQ7FjRGTy
+    get:
+      description: |
+        [Get an Album](https://developer.spotify.com/web-api/get-album/)
+      queryParameters:
+        market:
+          displayName: Market
+          description: The market (an ISO 3166-1 alpha-2 country code)
+          type: string
+          example: ES
+          required: false
+    /tracks:
+      displayName: album-tracks
+      get:
+        is: [ paged ]
+        description: |
+          [Get an Album's Tracks](https://developer.spotify.com/web-api/get-albums-tracks/)
+        queryParameters:
+          market:
+            displayName: Market
+            description: The market (an ISO 3166-1 alpha-2 country code)
+            type: string
+            example: ES
+            required: false
+/artists:
+  displayName: several-artists
+  get:
+    description: |
+      [Get Several Artists](https://developer.spotify.com/web-api/get-several-artists/)
+    queryParameters:
+      ids:
+        displayName: Spotify Artist IDs
+        type: string
+        description: A comma-separated list of IDs
+        required: true
+        example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+  /{id}:
+    displayName: artist
+    uriParameters:
+      id:
+        displayName: Spotify Artist ID
+        type: string
+        description: The Spotify ID for the artist
+        example: 0TnOYISbd1XYRBk9myaseg
+        required: true
+    get:
+      description: |
+        [Get an Artist](https://developer.spotify.com/web-api/get-artist/)
+    /top-tracks:
+      displayName: artist-top-tracks
+      get:
+        description: |
+          [Get an Artist's Top Tracks](https://developer.spotify.com/web-api/get-artists-top-tracks/)
+        queryParameters:
+          country:
+            displayName: Country
+            description: The country (an ISO 3166-1 alpha-2 country code)
+            type: string
+            example: ES
+            required: true
+    /related-artists:
+      displayName: artist-related-artists
+      get:
+        description: |
+          [Get an Artist's Related Artists](https://developer.spotify.com/web-api/get-related-artists/)
+    /albums:
+      displayName: artist-albums
+      get:
+        is: [ paged ]
+        description: |
+          [Get an Artist's Albums](https://developer.spotify.com/web-api/get-artists-albums/)
+        queryParameters:
+          album_type:
+            displayName: Album Type (single, album, appears_on, compilation)
+            description: Filter by album types
+            type: string
+            required: false
+            example: single,album
+          market:
+            displayName: Market
+            description: The market (an ISO 3166-1 alpha-2 country code)
+            type: string
+            example: ES
+            required: false
+/tracks:
+  displayName: several-tracks
+  get:
+    description: |
+      [Get Several Tracks](https://developer.spotify.com/web-api/get-several-tracks/)
+    queryParameters:
+      ids:
+        displayName: Spotify Track IDs
+        type: string
+        description: A comma-separated list of IDs
+        required: true
+        example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+      market:
+        displayName: Market
+        description: The market (an ISO 3166-1 alpha-2 country code)
+        type: string
+        example: ES
+        required: false
+  /{id}:
+    displayName: track
+    uriParameters:
+      id:
+        type: string
+        displayName: Spotify Track ID
+        example: 1zHlj4dQ8ZAtrayhuDDmkY
+    get:
+      description: |
+        [Get a Track](https://developer.spotify.com/web-api/get-track/)
+      queryParameters:
+        market:
+          displayName: Market
+          description: The market (an ISO 3166-1 alpha-2 country code)
+          type: string
+          example: ES
+          required: false
+/search:
+  displayName: search-item
+  get:
+    is: [ paged ]
+    description: |
+      [Search for an Item](https://developer.spotify.com/web-api/search-item/)
+    queryParameters:
+      q:
+        displayName: Query
+        type: string
+        description: The search query's keywords (and optional field filters). The search is not case-sensitive: 'roadhouse' will match 'Roadhouse', 'roadHouse', etc. Keywords will be matched in any order unless surrounded by quotes, thus q=roadhouse&20blues will match both 'Blues Roadhouse' and 'Roadhouse of the Blues'. Quotation marks can be used to limit the match to a phrase: q=roadhouse&20blues will match 'My Roadhouse Blues' but not 'Roadhouse of the Blues'. By default, results are returned when a match is found in any field of the target object type. Searches can be made more specific by specifying an album, artist or track field filter. For example q=album:gold%20artist:abba&type=album will search for albums with the text 'gold' in the album name and the text 'abba' in an artist name. Other possible field filters, depending on object types being searched, include year, genre, upc, and isrc. For example, q=damian%20genre:reggae-pop&type=artist. The asterisk (*) character can, with some limitations, be used as a wildcard (maximum: 2 per query). It will match a variable number of non-white-space characters. It cannot be used in a quoted phrase, in a field filter, or as the first character of the keyword string. Searching for playlists will return results matching the playlist's name and/or description.
+        example: Muse
+        required: true
+      type:
+        displayName: Item Type (album, artist, track, playlist)
+        description: A comma-separated list of item types to search across. Search results will include hits from all the specified item types; for example q=name:abacab&type=album,track will return both albums and tracks with "abacab" in their name.
+        type: string
+        example: track,artist
+        required: true
+      market:
+        displayName: Market
+        type: string
+        description: The market (an ISO 3166-1 alpha-2 country code).  If given, only items with content playable in that market will be returned.
+        example: US
+/me:
+  displayName: current-user
+  securedBy: [ oauth_2_0: {scopes: ["user-read-private", "user-read-birthdate", "user-read-email"]} ]
+  get:
+    description: |
+      [Get Current User's Profile](https://developer.spotify.com/web-api/get-current-users-profile/)
+  /tracks:
+    displayName: current-user-saved-tracks
+    type: collection
+    get:
+      is: [ paged ]
+      description: |
+        [Get Current User's Saved Tracks](https://developer.spotify.com/web-api/get-users-saved-tracks/)
+      securedBy: [ oauth_2_0: {scopes: ["user-library-read"]}]
+      queryParameters:
+        market:
+          displayName: Market
+          description: The market (an ISO 3166-1 alpha-2 country code)
+          type: string
+          example: ES
+          required: false
+    put:
+      description: |
+        [Save Tracks for Current User](https://developer.spotify.com/web-api/save-tracks-user/)
+      securedBy: [ oauth_2_0: {scopes: ["user-library-modify"]}]
+      queryParameters:
+        ids:
+          displayName: Spotify Track IDs
+          type: string
+          description: A comma-separated list of IDs
+          required: true
+          example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+    delete:
+      description: |
+        [Remove Tracks for Current User](https://developer.spotify.com/web-api/remove-tracks-user/)
+      securedBy: [ oauth_2_0: {scopes: ["user-library-modify"]}]
+      queryParameters:
+        ids:
+          displayName: Spotify Track IDs
+          type: string
+          description: A comma-separated list of IDs
+          required: true
+          example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+    /contains:
+      displayName: current-user-contains-saved-tracks
+      get:
+        description: |
+          [Check Current User's Saved Tracks](https://developer.spotify.com/web-api/check-users-saved-tracks/)
+        securedBy: [ oauth_2_0: {scopes: ["user-library-read"]}]
+        queryParameters:
+          ids:
+            displayName: Spotify Track IDs
+            type: string
+            description: A comma-separated list of IDs
+            required: true
+            example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+/users/{user_id}:
+  displayName: users-profile
+  uriParameters:
+    user_id:
+      displayName: User ID
+      type: string
+      description: The user's Spotify user ID.
+      example: smedjan
+  get:
+    description: |
+      [Get a User's Profile](https://developer.spotify.com/web-api/get-users-profile/)
+/users/{user_id}/playlists:
+  type: collection
+  uriParameters:
+    user_id:
+      displayName: Owner ID
+      type: string
+      description: The user's Spotify user ID.
+      example: jmperezperez
+  displayName: playlists
+  get:
+    is: [ paged ]
+    description: |
+      [Get a List of a User's Playlists](https://developer.spotify.com/web-api/get-list-users-playlists/)
+    securedBy: [ oauth_2_0: {scopes: ["playlist-read-private", "playlist-read-collaborative"]}]
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "type": "array",
+                "items": {
+                  "$ref": "schemas/playlist.json"
+                }
+              }
+  post:
+    description: |
+      [Create a Playlist](https://developer.spotify.com/web-api/create-playlist/)
+    securedBy: [ oauth_2_0: {scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+    body:
+      application/json:
+        schema: !include schemas/post-playlist.json
+        example: !include examples/post-playlist.json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Playlist
+  /{playlist_id}:
+    type: item
+    displayName: playlist
+    uriParameters:
+      playlist_id:
+        displayName: Playlist ID
+        description: The Spotify playlist ID.
+        example: 3cEYpjA9oz9GiPac4AsH4n
+        type: string
+        required: true
+    get:
+      description: |
+        [Get a Playlist](https://developer.spotify.com/web-api/get-playlist/)
+      securedBy: [ oauth_2_0: { scopes: []}]
+      is: [ filterable ]
+      queryParameters:
+        market:
+          displayName: Market
+          description: The market (an ISO 3166-1 alpha-2 country code)
+          type: string
+          example: ES
+          required: false
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Playlist
+    put:
+      description: |
+        [Change a Playlist's Details](https://developer.spotify.com/web-api/change-playlist-details/)
+      securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+      body:
+        application/json:
+          schema: !include schemas/put-playlist.json
+          example: !include examples/put-playlist.json
+    /tracks:
+      type: collection
+      displayName: playlist-tracks
+      get:
+        description: |
+          [Get a Playlist's Tracks](https://developer.spotify.com/web-api/get-playlists-tracks/)
+        securedBy: [ oauth_2_0: { scopes: []}]
+        is: [ filterable, paged ]
+        queryParameters:
+          market:
+            displayName: Market
+            description: The market (an ISO 3166-1 alpha-2 country code)
+            type: string
+            example: ES
+            required: false
+      post:
+        description: |
+          [Add Tracks to a Playlist](https://developer.spotify.com/web-api/add-tracks-to-playlist/)
+        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        queryParameters:
+          position:
+            displayName: Position (append by default)
+            description: The position to insert the tracks, a zero-based index
+            example: 0
+            type: integer
+            required: false
+          uris:
+            displayName: Spotify Track URIs
+            description: A comma-separated list of Spotify track URIs to add. A maximum of 100 tracks can be added in one request.
+            type: string
+            required: true
+            example: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M"
+      put:
+        description: |
+          [Reorder or replace a Playlist's Tracks](https://developer.spotify.com/web-api/reorder-playlists-tracks/)
+        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        body:
+          application/json:
+            schema: !include schemas/put-playlist-tracks.json
+            example: !include examples/put-playlist-tracks.json
+      delete:
+        description: |
+          [Remove Tracks from a Playlist](https://developer.spotify.com/web-api/remove-tracks-playlist/)
+        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        body:
+          application/json:
+            schema: !include schemas/delete-playlist-tracks.json
+            example: !include examples/delete-playlist-tracks.json
+    /followers:
+      displayName: playlist-followers
+      put:
+        description: |
+          [Follow a Playlist](https://developer.spotify.com/web-api/follow-playlist/)
+        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        body:
+          application/json:
+            schema: |
+              {
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "id": "http://jsonschema.net",
+                "required": false,
+                "properties": {
+                  "public": {
+                    "type": "boolean",
+                    "required": false
+                  }
+                }
+              }
+            example: !include examples/put-playlist-followers.json
+      delete:
+        description: |
+          [Unfollow a Playlist](https://developer.spotify.com/web-api/unfollow-playlist/)
+        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+      /contains:
+        displayName: playlist-followers-contains
+        get:
+          description: |
+            [Check if Users Follow a Playlist](https://developer.spotify.com/web-api/check-user-following-playlist/)
+          securedBy: [ oauth_2_0: { scopes: []}]
+          queryParameters:
+            ids:
+              displayName: Spotify user IDs
+              type: string
+              description: A comma-separated list of users ids
+              required: true
+              example: "jmperezperez,thelinmichael,wizzler"
+/browse/new-releases:
+  displayName: new-releases
+  type: collection
+  get:
+    is: [ paged ]
+    description: |
+      [Get a List of New Releases](https://developer.spotify.com/web-api/get-list-new-releases/)
+    securedBy: [ oauth_2_0: {scopes: []} ]
+    queryParameters:
+      country:
+        displayName: Country
+        description: The country (an ISO 3166-1 alpha-2 country code)
+        type: string
+        example: SE
+        required: false
+/browse/featured-playlists:
+  displayName: featured-playlists
+  type: collection
+  get:
+    is: [ paged ]
+    description: |
+      [Get a List of Featured Playlists](https://developer.spotify.com/web-api/get-list-featured-playlists/)
+    securedBy: [ oauth_2_0: {scopes: []} ]
+    queryParameters:
+      country:
+        displayName: Country
+        description: The country (an ISO 3166-1 alpha-2 country code)
+        type: string
+        example: SE
+        required: false
+      locale:
+        displayName: Locale
+        description: |
+          The desired language, consisting of an ISO 639 language code and an ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning "Spanish (Mexico)".
+        type: string
+        example: sv_SE
+        required: false
+      timestamp:
+        displayName: Timestamp
+        description: |
+          A timestamp in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ss) with the user's local time to get results tailored to a specific date and time in the day. If not provided, it defaults to the current UTC time. Example: "2014-10-23T09:00:00" for a user whose local time is 9AM.
+        type: string
+        example: "2014-10-23T09:00:00"
+        required: false
+/browse/categories:
+  displayName: browse-categories
+  type: collection
+  get:
+    description: |
+      [Get a List of Browse Categories](https://developer.spotify.com/web-api/get-list-categories/)
+    securedBy: [ oauth_2_0: {scopes: []} ]
+    queryParameters:
+      country:
+        displayName: Country
+        description: The country (an ISO 3166-1 alpha-2 country code)
+        type: string
+        example: SE
+        required: false
+      locale:
+        displayName: Locale
+        description: |
+          The desired language, consisting of an ISO 639 language code and an ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning "Spanish (Mexico)".
+        type: string
+        example: sv_SE
+        required: false
+      limit:
+        displayName: Limit
+        description: The maximum number of category objects to return
+        type: integer
+        example: 10
+        minimum: 0
+        default: 20
+        maximum: 50
+        required: false
+      offset:
+        displayName: Offset
+        description: The index of the first category to return
+        type: integer
+        example: 5
+        default: 0
+        required: false
+  /{category_id}:
+    displayName: browse-category
+    type: item
+    uriParameters:
+      category_id:
+        displayName: Category ID
+        type: string
+        description: The Spotify ID of the category you wish to fetch.
+        example: dinner
+    get:
+      description: |
+        [Get a Single Browse Category](https://developer.spotify.com/web-api/get-category/)
+      securedBy: [ oauth_2_0: {scopes: []} ]
+      queryParameters:
+        country:
+          displayName: Country
+          description: The country (an ISO 3166-1 alpha-2 country code)
+          type: string
+          example: SE
+          required: false
+        locale:
+          displayName: Locale
+          description: |
+            The desired language, consisting of an ISO 639 language code and an ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning "Spanish (Mexico)".
+          type: string
+          example: sv_SE
+          required: false
+    /playlists:
+      displayName: category-playlists
+      type: collection
+      get:
+        description: |
+          [Get a Category's playlists](https://developer.spotify.com/web-api/get-categorys-playlists/)
+        securedBy: [ oauth_2_0: {scopes: []} ]
+        queryParameters:
+          country:
+            displayName: Country
+            description: The country (an ISO 3166-1 alpha-2 country code)
+            type: string
+            example: SE
+            required: false
+          limit:
+            displayName: Limit
+            description: The maximum number of playlist objects to return
+            type: integer
+            example: 10
+            minimum: 0
+            default: 20
+            maximum: 50
+            required: false
+          offset:
+            displayName: Offset
+            description: The index of the first playlist to return
+            type: integer
+            example: 5
+            default: 0
+            required: false
+/me/following:
+  displayName: following
+  put:
+    description: |
+      [Follow Artists or Users](https://developer.spotify.com/web-api/follow-artists-users/)
+    securedBy: [ oauth_2_0: {scopes: ["user-follow-modify"]} ]
+    queryParameters:
+      type:
+        displayName: Item Type
+        description: The type to follow.
+        type: string
+        example: artist
+        enum: ["artist", "user"]
+        required: true
+      ids:
+        displayName: Spotify IDs
+        type: string
+        description: A comma-separated list of the artists or users ids
+        required: true
+        example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+  delete:
+    description: |
+      [Unfollow Artists or Users](https://developer.spotify.com/web-api/unfollow-artists-users/)
+    securedBy: [ oauth_2_0: {scopes: ["user-follow-modify"]} ]
+    queryParameters:
+      type:
+        displayName: Item Type
+        description: The type to unfollow.
+        type: string
+        example: artist
+        enum: ["artist", "user"]
+        required: true
+      ids:
+        displayName: Spotify IDs
+        type: string
+        description: A comma-separated list of the artists or users ids
+        required: true
+        example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+  /contains:
+    displayName: following-contains
+    get:
+      description: |
+        [Check if Current User Follows Artists or Users](https://developer.spotify.com/web-api/check-current-user-follows/)
+      securedBy: [ oauth_2_0: {scopes: ["user-follow-read"]} ]
+      queryParameters:
+        type:
+          displayName: Item Type
+          description: The type to follow.
+          type: string
+          example: artist
+          enum: ["artist", "user"]
+          required: true
+        ids:
+          displayName: Spotify IDs
+          description: A comma-separated string of the artists or users ids.
+          type: string
+          example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+          required: true

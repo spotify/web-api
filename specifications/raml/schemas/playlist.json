@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the playlist."
+    },
+    "id": {
+      "type": "string",
+      "description": "ID of the playlist."
+    },
+    "uri": {
+      "type": "string",
+      "description": "Spotify URI of the entity."
+    },
+    "link": {
+      "type": "string",
+      "description": "HTTP link of the entity."
+    },
+    "api_link": {
+      "type": "string",
+      "description": "API resource address of the entity."
+    },
+    "followers_count": {
+      "type": "number",
+      "description": "The number of users following the playlist."
+    },
+    "collaborative": {
+      "type": "boolean",
+      "description": "True if the owner allows other users to modify the playlist."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "Indicates whether the playlist is publicly discoverable. This does not restrict access for users who already know the playlist's URI."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of the playlist."
+    },
+    "image": {
+      "type": "string",
+      "description": "URL of a picture associated with the playlist."
+    },
+    "owner": {
+      "$ref": "User.json",
+      "description": "User who owns the playlist."
+    },
+    "items": {
+      "type": "array",
+      "description": "Contents of the playlist (an array of Track objects).",
+      "items": {
+        "$ref": "Track.json"
+      }
+    }
+  }
+}
