@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "birthdate": {
+      "type": "string",
+      "description": "The user's date-of-birth. This field is only available when the current user has granted access to the user-read-birthdate scope."
+    },
+    "country": {
+      "type": "string",
+      "description": "The country of the user, as set in the user's account profile. An ISO 3166-1 alpha-2 country code. This field is only available when the current user has granted access to the user-read-private scope."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "The name displayed on the user's profile."
+    },
+    "email": {
+      "type": "string",
+      "description": "The user's email address, as entered by the user when creating their account. This email address is unverified; there is no proof that it actually belongs to the user. This field is only available when the current user has granted access to the user-read-email scope."
+    },
+    "external_urls": {
+      "type": "object",
+      "description": "Known external URLs for this user.",
+      "": [{
+        "type": "string"
+      }]
+    },
+    "followers": { "$ref": "followers" },
+    "href": {
+      "type": "string",
+      "description": "A link to the Web API endpoint for this user."
+    },
+    "id": {
+      "type": "string",
+      "description": "The Spotify ID for this user."
+    },
+    "product": {
+      "type": "string",
+      "description": "The user's Spotify subscription level: 'premium', 'free', etc. (The subscription level 'open' can be considered the same as 'free'.) This field is only available when the current user has granted access to the user-read-private scope."
+    },
+    "type": {
+      "type": "string",
+      "description": "The object type: 'user'"
+    },
+    "uri": {
+      "type": "string",
+      "description": "The Spotify URI for the user."
+    }
+  }
+}

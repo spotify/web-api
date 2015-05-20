@@ -8,8 +8,6 @@ documentation:
     content: |
       Welcome to the _Spotify Web API_ specification. For more information about
       how to use the API, check out the [Spotify's developer site](https://developer.spotify.com/web-api/).
-schemas:
-  - Playlist: !include schemas/playlist.json
 resourceTypes:
   - base:
       get?: &common
@@ -109,6 +107,22 @@ traits:
         type: string
         example: ES
         required: false
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "type": "object",
+                "properties" : {
+                  "albums" : {
+                    "type": "array",
+                    "items": {
+                       "$ref": "album"
+                    }
+                 }
+              }
   /{id}:
     displayName: album
     uriParameters:
@@ -127,6 +141,11 @@ traits:
           type: string
           example: ES
           required: false
+      responses:
+        200:
+          body:
+            application/json:
+              schema: album
     /tracks:
       displayName: album-tracks
       get:
@@ -140,6 +159,11 @@ traits:
             type: string
             example: ES
             required: false
+        responses:
+          200:
+            body:
+              application/json:
+                schema: album-track-page
 /artists:
   displayName: several-artists
   get:
@@ -152,6 +176,22 @@ traits:
         description: A comma-separated list of IDs
         required: true
         example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "type": "object",
+                "properties" : {
+                  "artists" : {
+                    "type": "array",
+                    "items": {
+                       "$ref": "artist"
+                    }
+                 }
+              }
   /{id}:
     displayName: artist
     uriParameters:
@@ -164,6 +204,11 @@ traits:
     get:
       description: |
         [Get an Artist](https://developer.spotify.com/web-api/get-artist/)
+      responses:
+        200:
+          body:
+            application/json:
+              schema: artist
     /top-tracks:
       displayName: artist-top-tracks
       get:
@@ -176,11 +221,41 @@ traits:
             type: string
             example: ES
             required: true
+        responses:
+          200:
+            body:
+              application/json:
+                schema: |
+                  {
+                    "$schema": "http://json-schema.org/draft-03/schema",
+                    "type": "object",
+                    "properties": {
+                      "tracks": {
+                        "type": "array",
+                        "items": {"$ref": "track"}
+                      }
+                    }
+                  }
     /related-artists:
       displayName: artist-related-artists
       get:
         description: |
           [Get an Artist's Related Artists](https://developer.spotify.com/web-api/get-related-artists/)
+        responses:
+          200:
+            body:
+              application/json:
+                schema: |
+                  {
+                    "$schema": "http://json-schema.org/draft-03/schema",
+                    "type": "object",
+                    "properties": {
+                      "artists": {
+                        "type": "array",
+                        "items": {"$ref": "artist"}
+                      }
+                    }
+                  }
     /albums:
       displayName: artist-albums
       get:
@@ -200,6 +275,11 @@ traits:
             type: string
             example: ES
             required: false
+        responses:
+          200:
+            body:
+              application/json:
+                schema: album-simple-page
 /tracks:
   displayName: several-tracks
   get:
@@ -218,6 +298,22 @@ traits:
         type: string
         example: ES
         required: false
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "type": "object",
+                "properties" : {
+                  "tracks" : {
+                    "type": "array",
+                    "items": {
+                       "$ref": "track"
+                    }
+                 }
+              }
   /{id}:
     displayName: track
     uriParameters:
@@ -235,6 +331,11 @@ traits:
           type: string
           example: ES
           required: false
+      responses:
+        200:
+          body:
+            application/json:
+              schema: track
 /search:
   displayName: search-item
   get:
@@ -259,12 +360,22 @@ traits:
         type: string
         description: The market (an ISO 3166-1 alpha-2 country code).  If given, only items with content playable in that market will be returned.
         example: US
+    responses:
+      200:
+        body:
+          application/json:
+            schema: search
 /me:
   displayName: current-user
   securedBy: [ oauth_2_0: {scopes: ["user-read-private", "user-read-birthdate", "user-read-email"]} ]
   get:
     description: |
       [Get Current User's Profile](https://developer.spotify.com/web-api/get-current-users-profile/)
+    responses:
+      200:
+        body:
+          application/json:
+            schema: current-user-profile
   /tracks:
     displayName: current-user-saved-tracks
     type: collection
@@ -280,6 +391,11 @@ traits:
           type: string
           example: ES
           required: false
+      responses:
+        200:
+          body:
+            application/json:
+              schema: saved-track-page
     put:
       description: |
         [Save Tracks for Current User](https://developer.spotify.com/web-api/save-tracks-user/)
@@ -291,6 +407,10 @@ traits:
           description: A comma-separated list of IDs
           required: true
           example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+      responses:
+        200:
+          body:
+            text/plain:
     delete:
       description: |
         [Remove Tracks for Current User](https://developer.spotify.com/web-api/remove-tracks-user/)
@@ -302,6 +422,10 @@ traits:
           description: A comma-separated list of IDs
           required: true
           example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+      responses:
+        200:
+          body:
+            text/plain:
     /contains:
       displayName: current-user-contains-saved-tracks
       get:
@@ -315,6 +439,19 @@ traits:
             description: A comma-separated list of IDs
             required: true
             example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+        responses:
+          200:
+            body:
+              application/json:
+                schema: |
+                  {
+                    "$schema": "http://json-schema.org/draft-03/schema",
+                    "type": "array",
+                    "items": {
+                      "type": "boolean",
+                      "description": "True if the track is in user's Your Music library, false otherwise"
+                    }
+                  }
 /users/{user_id}:
   displayName: users-profile
   uriParameters:
@@ -326,6 +463,11 @@ traits:
   get:
     description: |
       [Get a User's Profile](https://developer.spotify.com/web-api/get-users-profile/)
+    responses:
+      200:
+        body:
+          application/json:
+            schema: user-profile
 /users/{user_id}/playlists:
   type: collection
   uriParameters:
@@ -344,14 +486,7 @@ traits:
       200:
         body:
           application/json:
-            schema: |
-              {
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "type": "array",
-                "items": {
-                  "$ref": "schemas/playlist.json"
-                }
-              }
+            schema: playlist-simple-page
   post:
     description: |
       [Create a Playlist](https://developer.spotify.com/web-api/create-playlist/)
@@ -364,7 +499,7 @@ traits:
       201:
         body:
           application/json:
-            schema: Playlist
+            schema: playlist
   /{playlist_id}:
     type: item
     displayName: playlist
@@ -391,7 +526,7 @@ traits:
         200:
           body:
             application/json:
-              schema: Playlist
+              schema: playlist
     put:
       description: |
         [Change a Playlist's Details](https://developer.spotify.com/web-api/change-playlist-details/)
@@ -400,6 +535,10 @@ traits:
         application/json:
           schema: !include schemas/put-playlist.json
           example: !include examples/put-playlist.json
+      responses:
+        200:
+          body:
+            text/plain:
     /tracks:
       type: collection
       displayName: playlist-tracks
@@ -415,6 +554,11 @@ traits:
             type: string
             example: ES
             required: false
+        responses:
+          200:
+            body:
+              application/json:
+                schema: playlist-track-page
       post:
         description: |
           [Add Tracks to a Playlist](https://developer.spotify.com/web-api/add-tracks-to-playlist/)
@@ -432,6 +576,11 @@ traits:
             type: string
             required: true
             example: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M"
+        responses:
+          200:
+            body:
+              application/json:
+                schema: playlist-snapshot
       put:
         description: |
           [Reorder or replace a Playlist's Tracks](https://developer.spotify.com/web-api/reorder-playlists-tracks/)
@@ -440,6 +589,11 @@ traits:
           application/json:
             schema: !include schemas/put-playlist-tracks.json
             example: !include examples/put-playlist-tracks.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: playlist-snapshot
       delete:
         description: |
           [Remove Tracks from a Playlist](https://developer.spotify.com/web-api/remove-tracks-playlist/)
@@ -448,6 +602,11 @@ traits:
           application/json:
             schema: !include schemas/delete-playlist-tracks.json
             example: !include examples/delete-playlist-tracks.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: playlist-snapshot
     /followers:
       displayName: playlist-followers
       put:
@@ -458,9 +617,8 @@ traits:
           application/json:
             schema: |
               {
-                "type": "object",
                 "$schema": "http://json-schema.org/draft-03/schema",
-                "id": "http://jsonschema.net",
+                "type": "object",
                 "required": false,
                 "properties": {
                   "public": {
@@ -470,10 +628,18 @@ traits:
                 }
               }
             example: !include examples/put-playlist-followers.json
+        responses:
+          200:
+            body:
+              text/plain:
       delete:
         description: |
           [Unfollow a Playlist](https://developer.spotify.com/web-api/unfollow-playlist/)
         securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        responses:
+          200:
+            body:
+              text/plain:
       /contains:
         displayName: playlist-followers-contains
         get:
@@ -487,6 +653,19 @@ traits:
               description: A comma-separated list of users ids
               required: true
               example: "jmperezperez,thelinmichael,wizzler"
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: |
+                    {
+                      "$schema": "http://json-schema.org/draft-03/schema",
+                      "type": "array",
+                      "items": {
+                        "type": "boolean",
+                        "description": "True if the user follows the playlist, false otherwise"
+                      }
+                    }
 /browse/new-releases:
   displayName: new-releases
   type: collection
@@ -502,6 +681,11 @@ traits:
         type: string
         example: SE
         required: false
+    responses:
+      200:
+        body:
+          application/json:
+            schema: album-simple-page
 /browse/featured-playlists:
   displayName: featured-playlists
   type: collection
@@ -531,10 +715,16 @@ traits:
         type: string
         example: "2014-10-23T09:00:00"
         required: false
+    responses:
+      200:
+        body:
+          application/json:
+            schema: playlist-simple-page
 /browse/categories:
   displayName: browse-categories
   type: collection
   get:
+    is: [ paged ]
     description: |
       [Get a List of Browse Categories](https://developer.spotify.com/web-api/get-list-categories/)
     securedBy: [ oauth_2_0: {scopes: []} ]
@@ -552,22 +742,11 @@ traits:
         type: string
         example: sv_SE
         required: false
-      limit:
-        displayName: Limit
-        description: The maximum number of category objects to return
-        type: integer
-        example: 10
-        minimum: 0
-        default: 20
-        maximum: 50
-        required: false
-      offset:
-        displayName: Offset
-        description: The index of the first category to return
-        type: integer
-        example: 5
-        default: 0
-        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            schema: category-page
   /{category_id}:
     displayName: browse-category
     type: item
@@ -595,10 +774,16 @@ traits:
           type: string
           example: sv_SE
           required: false
+      responses:
+        200:
+          body:
+            application/json:
+              schema: category
     /playlists:
       displayName: category-playlists
       type: collection
       get:
+        is: [ paged ]
         description: |
           [Get a Category's playlists](https://developer.spotify.com/web-api/get-categorys-playlists/)
         securedBy: [ oauth_2_0: {scopes: []} ]
@@ -609,22 +794,20 @@ traits:
             type: string
             example: SE
             required: false
-          limit:
-            displayName: Limit
-            description: The maximum number of playlist objects to return
-            type: integer
-            example: 10
-            minimum: 0
-            default: 20
-            maximum: 50
-            required: false
-          offset:
-            displayName: Offset
-            description: The index of the first playlist to return
-            type: integer
-            example: 5
-            default: 0
-            required: false
+        responses:
+          200:
+            body:
+              application/json:
+                schema: |
+                  {
+                    "$schema": "http://json-schema.org/draft-03/schema",
+                    "type": "object",
+                    "properties": {
+                      "playlists": {
+                        "$ref": "playlist-simple-page"
+                      }
+                    }
+                  }
 /me/following:
   displayName: following
   put:
@@ -645,6 +828,8 @@ traits:
         description: A comma-separated list of the artists or users ids
         required: true
         example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+    responses:
+      204:
   delete:
     description: |
       [Unfollow Artists or Users](https://developer.spotify.com/web-api/unfollow-artists-users/)
@@ -663,6 +848,8 @@ traits:
         description: A comma-separated list of the artists or users ids
         required: true
         example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+    responses:
+      204:
   /contains:
     displayName: following-contains
     get:
@@ -683,3 +870,40 @@ traits:
           type: string
           example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
           required: true
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-03/schema",
+                  "type": "array",
+                  "items": {
+                    "type": "boolean",
+                    "description": "True if the user follows the artist/user, false otherwise"
+                  }
+                }
+schemas:
+  - album: !include schemas/album.json
+  - album-simple: !include schemas/album-simple.json
+  - album-simple-page: !include schemas/album-simple-page.json
+  - album-track-page: !include schemas/album-track-page.json
+  - artist: !include schemas/artist.json
+  - artist-simple: !include schemas/artist-simple.json
+  - category: !include schemas/category.json
+  - category-page: !include schemas/category-page.json
+  - image: !include schemas/image.json
+  - playlist: !include schemas/playlist.json
+  - playlist-simple: !include schemas/playlist-simple.json
+  - playlist-simple-page: !include schemas/playlist-simple-page.json
+  - playlist-snapshot: !include schemas/playlist-snapshot.json
+  - playlist-track: !include schemas/playlist-track.json
+  - playlist-track-page: !include schemas/playlist-track-page.json
+  - track: !include schemas/track.json
+  - track-simple: !include schemas/track-simple.json
+  - track-simple-page: !include schemas/track-simple-page.json
+  - followers: !include schemas/followers.json
+  - user-profile: !include schemas/user-profile.json
+  - current-user-profile: !include schemas/current-user-profile.json
+  - saved-track: !include schemas/saved-track.json
+  - saved-track-page: !include schemas/saved-track-page.json

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "type": "string",
+      "description": "The name displayed on the user's profile."
+    },
+    "external_urls": {
+      "type": "object",
+      "description": "Known external URLs for this user.",
+      "": [{
+        "type": "string"
+      }]
+    },
+    "followers": { "$ref": "followers" },
+    "href": {
+      "type": "string",
+      "description": "A link to the Web API endpoint for this user."
+    },
+    "id": {
+      "type": "string",
+      "description": "The Spotify ID for this user."
+    },
+    "type": {
+      "type": "string",
+      "description": "The object type: 'user'"
+    },
+    "uri": {
+      "type": "string",
+      "description": "The Spotify URI for the user."
+    }
+  }
+}
