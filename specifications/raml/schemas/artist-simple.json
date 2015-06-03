@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "external_urls": {
+      "type": "object",
+      "description": "Known external URLs for this artist.",
+      "": [{
+        "type": "string"
+      }]
+    },
+    "href": {
+      "type": "string",
+      "description": "A link to the Web API endpoint providing full details of the artist."
+    },
+    "id": {
+      "type": "string",
+      "description": "The Spotify ID for the artist."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the artist."
+    },
+    "type": {
+      "type": "string",
+      "description": "The object type: 'artist'"
+    },
+    "uri": {
+      "type": "string",
+      "description": "The Spotify URI for the artist."
+    }
+  }
+}

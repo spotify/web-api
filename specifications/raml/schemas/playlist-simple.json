@@ -6,10 +6,6 @@
       "type": "boolean",
       "description": "True if the owner allows other users to modify the playlist."
     },
-    "description": {
-      "type": "string",
-      "description": "The playlist description. Only returned for modified, verified playlists, otherwise null."
-    },
     "external_urls": {
       "type": "object",
       "description": "Known external URLs for this album.",
@@ -18,20 +14,6 @@
           "type": "string",
           "description": "The type of the URL, for example: 'spotify' - The Spotify URL for the object."
         }]
-      }
-    },
-    "followers": {
-      "type": "object",
-      "description": "Information about the followers of the playlist.",
-      "properties": {
-        "href": {
-          "type": "string",
-          "description": "A link to the Web API endpoint providing full details of the followers; null if not available."
-        },
-        "total": {
-          "type": "integer",
-          "description": "The total number of followers."
-        }
       }
     },
     "href": {
@@ -61,7 +43,17 @@
       "description": "The version identifier for the current playlist. Can be supplied in other requests to target a specific playlist version"
     },
     "tracks": {
-      "$ref": "playlist-track-page"
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "description": "A link to the Web API endpoint returning the full result of the request."
+        },
+        "total": {
+          "type": "integer",
+          "description": "The total number of tracks available to return."
+        }
+      }
     },
     "type": {
       "type": "string",
