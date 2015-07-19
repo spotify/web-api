@@ -813,6 +813,38 @@ traits:
                   }
 /me/following:
   displayName: following
+  get:
+    description: |
+      [Get User's Followed Artists](https://developer.spotify.com/web-api/get-followed-artists/)
+    securedBy: [ oauth_2_0: {scopes: ["user-follow-read"]} ]
+    queryParameters:
+      type:
+        displayName: Item Type
+        description: The ID type, currently only artist is supported.
+        type: string
+        example: artist
+        enum: ["artist"]
+        required: true
+      limit:
+        displayName: Limit
+        description: The maximum number of items to return
+        type: integer
+        example: 10
+        minimum: 0
+        default: 20
+        maximum: 50
+        required: false
+      after:
+        displayName: After
+        description: The last artist ID retrieved from the previous request.
+        type: string
+        example: 0aV6DOiouImYTqrR5YlIqx
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            schema: user-followed
   put:
     description: |
       [Follow Artists or Users](https://developer.spotify.com/web-api/follow-artists-users/)
@@ -906,6 +938,7 @@ schemas:
   - track-simple: !include schemas/track-simple.json
   - track-simple-page: !include schemas/track-simple-page.json
   - followers: !include schemas/followers.json
+  - user-followed: !include schemas/user-followed.json
   - user-profile: !include schemas/user-profile.json
   - current-user-profile: !include schemas/current-user-profile.json
   - saved-track: !include schemas/saved-track.json
