@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "artists": {
+      "type": "object",
+      "description": "Present if the type of followe items is 'artist'.",
+      "properties": {
+        "href": {
+          "type": "string",
+          "description": "A link to the Web API endpoint returning the full result of the request."
+        },
+        "items": {
+          "type": "array",
+          "description": "The requested data.",
+          "items": {
+            "$ref": "artist"
+          }
+        },
+        "limit": {
+          "type": "integer",
+          "description": "The maximum number of items in the response (as set in the query or by default)."
+        },
+        "next": {
+          "type": "string",
+          "description": "URL to the next page of items. (null if none)"
+        },
+        "cursor": {
+          "type": "object",
+          "description": "The cursors used to find the next set of items.",
+          "properties": {
+            "after": {
+              "type": "string",
+              "description": "The cursor to use as key to find the next page of items."
+            }
+          }
+        },
+        "total": {
+          "type": "integer",
+          "description": "The total number of items available to return."
+        }
+      }
+    }
+  }
+}
