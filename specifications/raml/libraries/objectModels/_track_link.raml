@@ -1,0 +1,16 @@
+#%RAML 1.0 DataType
+type: object
+displayName: Track Link
+properties:
+  external_urls:
+    type: ExternalUrl
+    description: Known external URLs for this track.
+  href:
+    type: string
+    description: |
+      A link to the Web API endpoint providing full details of the track.
+  id: SpotifyId
+  type:
+    type: string
+    description: The object type: "track".
+  uri: SpotifyUri

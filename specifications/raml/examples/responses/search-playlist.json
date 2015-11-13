@@ -1,0 +1,739 @@
+{
+  "playlists" : {
+    "href" : "https://api.spotify.com/v1/search?query=Rock&offset=0&limit=20&type=playlist&market=US",
+    "items" : [ {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/1168152255/playlist/32zO374e2iTl4iWCnUXFIQ"
+      },
+      "href" : "https://api.spotify.com/v1/users/1168152255/playlists/32zO374e2iTl4iWCnUXFIQ",
+      "id" : "32zO374e2iTl4iWCnUXFIQ",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/66eeebd19edaf8dc1dcfbb0cd9bd59c4010ceb6afa21a1a329e2ef69f5126a4ef3580c28a012d55d16f15acfa1e6d1458dea7d5696b73af58410922b9ba487d9edd09d754bbc38f867c77249a0c2f786",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/66eeebd19edaf8dc1dcfbb0cd9bd59c4010ceb6afa21a1a329e2ef69f5126a4ef3580c28a012d55d16f15acfa1e6d1458dea7d5696b73af58410922b9ba487d9edd09d754bbc38f867c77249a0c2f786",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/66eeebd19edaf8dc1dcfbb0cd9bd59c4010ceb6afa21a1a329e2ef69f5126a4ef3580c28a012d55d16f15acfa1e6d1458dea7d5696b73af58410922b9ba487d9edd09d754bbc38f867c77249a0c2f786",
+        "width" : 60
+      } ],
+      "name" : "Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/1168152255"
+        },
+        "href" : "https://api.spotify.com/v1/users/1168152255",
+        "id" : "1168152255",
+        "type" : "user",
+        "uri" : "spotify:user:1168152255"
+      },
+      "public" : null,
+      "snapshot_id" : "7ZiGjytIB/JbdI+X6FaTV6CtGOFzpyy8ArRcwerRy1DOtOGZK61HLM076D1kxVVX",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/1168152255/playlists/32zO374e2iTl4iWCnUXFIQ/tracks",
+        "total" : 298
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:1168152255:playlist:32zO374e2iTl4iWCnUXFIQ"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/1151619721/playlist/6L2A9j3hif7xgL2iVrlosk"
+      },
+      "href" : "https://api.spotify.com/v1/users/1151619721/playlists/6L2A9j3hif7xgL2iVrlosk",
+      "id" : "6L2A9j3hif7xgL2iVrlosk",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/b6c1bd0c88ec9502eac1ee8ee7f10e76cc1cecf3363a2fb6b839c2ce59e0d6e4c1f55673444f7efc06f3f39c9a2cc4dcf7980be9fba3cf7d5ad21b232a8fa8e2ae204ed9b852b0520e7c8377be7a5092",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/b6c1bd0c88ec9502eac1ee8ee7f10e76cc1cecf3363a2fb6b839c2ce59e0d6e4c1f55673444f7efc06f3f39c9a2cc4dcf7980be9fba3cf7d5ad21b232a8fa8e2ae204ed9b852b0520e7c8377be7a5092",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/b6c1bd0c88ec9502eac1ee8ee7f10e76cc1cecf3363a2fb6b839c2ce59e0d6e4c1f55673444f7efc06f3f39c9a2cc4dcf7980be9fba3cf7d5ad21b232a8fa8e2ae204ed9b852b0520e7c8377be7a5092",
+        "width" : 60
+      } ],
+      "name" : "'Rock'",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/1151619721"
+        },
+        "href" : "https://api.spotify.com/v1/users/1151619721",
+        "id" : "1151619721",
+        "type" : "user",
+        "uri" : "spotify:user:1151619721"
+      },
+      "public" : null,
+      "snapshot_id" : "Fs/r6DJMyEt3Vmpmj8rdHko3/VNnjOa2mHs9YNn2OjJjEa0fvFqPsJMd2zeuCmi4",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/1151619721/playlists/6L2A9j3hif7xgL2iVrlosk/tracks",
+        "total" : 61
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:1151619721:playlist:6L2A9j3hif7xgL2iVrlosk"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/cafedelaplazasn/playlist/7CkXU833jvEtsMWM3ZQ6ze"
+      },
+      "href" : "https://api.spotify.com/v1/users/cafedelaplazasn/playlists/7CkXU833jvEtsMWM3ZQ6ze",
+      "id" : "7CkXU833jvEtsMWM3ZQ6ze",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/56a730f62bbdeed20b0c76b484f7c84bd337d71107e5c4b42927bbd3393211935da6bab1241c93f045a60e16f72b5fd6ef000b07e8c1afee95243bd840a39a978d38f78555a93f28881b0479033d3b75",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/56a730f62bbdeed20b0c76b484f7c84bd337d71107e5c4b42927bbd3393211935da6bab1241c93f045a60e16f72b5fd6ef000b07e8c1afee95243bd840a39a978d38f78555a93f28881b0479033d3b75",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/56a730f62bbdeed20b0c76b484f7c84bd337d71107e5c4b42927bbd3393211935da6bab1241c93f045a60e16f72b5fd6ef000b07e8c1afee95243bd840a39a978d38f78555a93f28881b0479033d3b75",
+        "width" : 60
+      } ],
+      "name" : "Rock nacional",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/cafedelaplazasn"
+        },
+        "href" : "https://api.spotify.com/v1/users/cafedelaplazasn",
+        "id" : "cafedelaplazasn",
+        "type" : "user",
+        "uri" : "spotify:user:cafedelaplazasn"
+      },
+      "public" : null,
+      "snapshot_id" : "0TjeiS0DqdDXjHe+/DOPAWv/OSmPobyImEgR5MRQbT6YgPTK6GmVF9NLGslDxl35",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/cafedelaplazasn/playlists/7CkXU833jvEtsMWM3ZQ6ze/tracks",
+        "total" : 144
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:cafedelaplazasn:playlist:7CkXU833jvEtsMWM3ZQ6ze"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/luccyyy/playlist/5e1bpazQUEHijFhcJobkAp"
+      },
+      "href" : "https://api.spotify.com/v1/users/luccyyy/playlists/5e1bpazQUEHijFhcJobkAp",
+      "id" : "5e1bpazQUEHijFhcJobkAp",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/7cc30bbf3935c30f795c99b19c1f7ad8f0427cff88afe354d016e19748fc30f1530507745cedc76b0d69e33e5e05c63fe4a9d3146771ec7e6f052dceec4f7a63269a7997b385763abc036f483ac46212",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/7cc30bbf3935c30f795c99b19c1f7ad8f0427cff88afe354d016e19748fc30f1530507745cedc76b0d69e33e5e05c63fe4a9d3146771ec7e6f052dceec4f7a63269a7997b385763abc036f483ac46212",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/7cc30bbf3935c30f795c99b19c1f7ad8f0427cff88afe354d016e19748fc30f1530507745cedc76b0d69e33e5e05c63fe4a9d3146771ec7e6f052dceec4f7a63269a7997b385763abc036f483ac46212",
+        "width" : 60
+      } ],
+      "name" : "'90s Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/luccyyy"
+        },
+        "href" : "https://api.spotify.com/v1/users/luccyyy",
+        "id" : "luccyyy",
+        "type" : "user",
+        "uri" : "spotify:user:luccyyy"
+      },
+      "public" : null,
+      "snapshot_id" : "XJdFPADoI9xkrko7wdtOuuEAf6a1qnW/5vzzXVHVEQoI6UOgiAa8zQ5+o/ylrD25",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/luccyyy/playlists/5e1bpazQUEHijFhcJobkAp/tracks",
+        "total" : 136
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:luccyyy:playlist:5e1bpazQUEHijFhcJobkAp"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/spotifyenespa%C3%B1ol/playlist/4YoI4gyyoBCIexSdjqJMfl"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotifyenespa%C3%B1ol/playlists/4YoI4gyyoBCIexSdjqJMfl",
+      "id" : "4YoI4gyyoBCIexSdjqJMfl",
+      "images" : [ {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/f8e7deaa2b4f1f819551e7e0e72647678065035d",
+        "width" : 300
+      } ],
+      "name" : "Rock en Español",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/spotifyenespa%C3%B1ol"
+        },
+        "href" : "https://api.spotify.com/v1/users/spotifyenespa%C3%B1ol",
+        "id" : "spotifyenespañol",
+        "type" : "user",
+        "uri" : "spotify:user:spotifyenespa%C3%B1ol"
+      },
+      "public" : null,
+      "snapshot_id" : "ZW6yjr2P0ghHVVyadkLXkzfmFlpJmBAb4t4hcOqvlj41HICnS9bbwMhfUCSdmeiv",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/spotifyenespa%C3%B1ol/playlists/4YoI4gyyoBCIexSdjqJMfl/tracks",
+        "total" : 55
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:spotifyenespa%C3%B1ol:playlist:4YoI4gyyoBCIexSdjqJMfl"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/12139882487/playlist/0GT2cUybdzdLHOluSuqXrX"
+      },
+      "href" : "https://api.spotify.com/v1/users/12139882487/playlists/0GT2cUybdzdLHOluSuqXrX",
+      "id" : "0GT2cUybdzdLHOluSuqXrX",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/0cbd3cf918346f95af5f180e86224943711a2f3a15ae789edf8dd8709113443f4d5491054c40e5abf3305bd725ecba2b5ca6a02d9e1ae7dcafdf81ecc955fc53f38c10cb0ed4babb2ef1af903936581e",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/0cbd3cf918346f95af5f180e86224943711a2f3a15ae789edf8dd8709113443f4d5491054c40e5abf3305bd725ecba2b5ca6a02d9e1ae7dcafdf81ecc955fc53f38c10cb0ed4babb2ef1af903936581e",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/0cbd3cf918346f95af5f180e86224943711a2f3a15ae789edf8dd8709113443f4d5491054c40e5abf3305bd725ecba2b5ca6a02d9e1ae7dcafdf81ecc955fc53f38c10cb0ed4babb2ef1af903936581e",
+        "width" : 60
+      } ],
+      "name" : "Indie/Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/12139882487"
+        },
+        "href" : "https://api.spotify.com/v1/users/12139882487",
+        "id" : "12139882487",
+        "type" : "user",
+        "uri" : "spotify:user:12139882487"
+      },
+      "public" : null,
+      "snapshot_id" : "WPVzHrTQVj1IIHwQpq5hXLOiFh90tJwz2bXN6NmxX8d2kJyo7t89f7kJWLfjC6iR",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/12139882487/playlists/0GT2cUybdzdLHOluSuqXrX/tracks",
+        "total" : 94
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:12139882487:playlist:0GT2cUybdzdLHOluSuqXrX"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/spotify/playlist/2Jpv2SJofWN9ico0PptuYn"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify/playlists/2Jpv2SJofWN9ico0PptuYn",
+      "id" : "2Jpv2SJofWN9ico0PptuYn",
+      "images" : [ {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/c273fbfab88a05617de77cb87d9b71b368c7867c",
+        "width" : 300
+      } ],
+      "name" : "Soft Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/spotify"
+        },
+        "href" : "https://api.spotify.com/v1/users/spotify",
+        "id" : "spotify",
+        "type" : "user",
+        "uri" : "spotify:user:spotify"
+      },
+      "public" : null,
+      "snapshot_id" : "BzDfLjGuf6DKUAnJAeyfeVopK20cIA/m0jwA4DzNIuNrbVsMFwJOZI+cVNvkwN5b",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/spotify/playlists/2Jpv2SJofWN9ico0PptuYn/tracks",
+        "total" : 69
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:spotify:playlist:2Jpv2SJofWN9ico0PptuYn"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/surfstar37/playlist/6dccfDG8fJJlDiu5bFv1AZ"
+      },
+      "href" : "https://api.spotify.com/v1/users/surfstar37/playlists/6dccfDG8fJJlDiu5bFv1AZ",
+      "id" : "6dccfDG8fJJlDiu5bFv1AZ",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/cbfd3a78ee915181f020fcfcafe017c0f2f3af89aee98c27ca5f2c48742ac071df819928098bff0b698502121a48d3b7ac0cc84d3874eae42e42a89bf686ce2d0dd6306359a8fc6b3f51a1b24850dda1",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/cbfd3a78ee915181f020fcfcafe017c0f2f3af89aee98c27ca5f2c48742ac071df819928098bff0b698502121a48d3b7ac0cc84d3874eae42e42a89bf686ce2d0dd6306359a8fc6b3f51a1b24850dda1",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/cbfd3a78ee915181f020fcfcafe017c0f2f3af89aee98c27ca5f2c48742ac071df819928098bff0b698502121a48d3b7ac0cc84d3874eae42e42a89bf686ce2d0dd6306359a8fc6b3f51a1b24850dda1",
+        "width" : 60
+      } ],
+      "name" : "Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/surfstar37"
+        },
+        "href" : "https://api.spotify.com/v1/users/surfstar37",
+        "id" : "surfstar37",
+        "type" : "user",
+        "uri" : "spotify:user:surfstar37"
+      },
+      "public" : null,
+      "snapshot_id" : "JteimVozXb0Z6f9gwJKJw7ztICKU8gq0TT5J89JldB9oaQNJa3cW7dkJsSlJi0V3",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/surfstar37/playlists/6dccfDG8fJJlDiu5bFv1AZ/tracks",
+        "total" : 282
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:surfstar37:playlist:6dccfDG8fJJlDiu5bFv1AZ"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/duucken/playlist/0TzX3NiTAC9GQWPes3W1X2"
+      },
+      "href" : "https://api.spotify.com/v1/users/duucken/playlists/0TzX3NiTAC9GQWPes3W1X2",
+      "id" : "0TzX3NiTAC9GQWPes3W1X2",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/7b83fba973b074018874aa868cc1b7f70c742f5a42846c907a26e6e9b49aa7c02641e93912568d7423a4de0897bff50532682bfc74c46612e28081f305085a4f3eee1960b31b15245fcb44971ecdebdb",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/7b83fba973b074018874aa868cc1b7f70c742f5a42846c907a26e6e9b49aa7c02641e93912568d7423a4de0897bff50532682bfc74c46612e28081f305085a4f3eee1960b31b15245fcb44971ecdebdb",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/7b83fba973b074018874aa868cc1b7f70c742f5a42846c907a26e6e9b49aa7c02641e93912568d7423a4de0897bff50532682bfc74c46612e28081f305085a4f3eee1960b31b15245fcb44971ecdebdb",
+        "width" : 60
+      } ],
+      "name" : "Bandit Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/duucken"
+        },
+        "href" : "https://api.spotify.com/v1/users/duucken",
+        "id" : "duucken",
+        "type" : "user",
+        "uri" : "spotify:user:duucken"
+      },
+      "public" : null,
+      "snapshot_id" : "YCjv4NbLTEfgeDknZrnHVrdeLBk2wFWUj0jxKbG1b6qNelRblLTYl3aPAuF4pztq",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/duucken/playlists/0TzX3NiTAC9GQWPes3W1X2/tracks",
+        "total" : 916
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:duucken:playlist:0TzX3NiTAC9GQWPes3W1X2"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/casperius/playlist/05k7PplHIBP9j1u1Lv7RRi"
+      },
+      "href" : "https://api.spotify.com/v1/users/casperius/playlists/05k7PplHIBP9j1u1Lv7RRi",
+      "id" : "05k7PplHIBP9j1u1Lv7RRi",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/5ab26908c13495c5d2332978ca46b7ecb7aa2305e3c7fbc62b9a69b0fef917c5608daaccdecb01c8335504a373513a35361340f02f2c9bf800b13e44c3b4128ee9391182c94927aa41b7fc69c80935ec",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/5ab26908c13495c5d2332978ca46b7ecb7aa2305e3c7fbc62b9a69b0fef917c5608daaccdecb01c8335504a373513a35361340f02f2c9bf800b13e44c3b4128ee9391182c94927aa41b7fc69c80935ec",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/5ab26908c13495c5d2332978ca46b7ecb7aa2305e3c7fbc62b9a69b0fef917c5608daaccdecb01c8335504a373513a35361340f02f2c9bf800b13e44c3b4128ee9391182c94927aa41b7fc69c80935ec",
+        "width" : 60
+      } ],
+      "name" : "Soft Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/casperius"
+        },
+        "href" : "https://api.spotify.com/v1/users/casperius",
+        "id" : "casperius",
+        "type" : "user",
+        "uri" : "spotify:user:casperius"
+      },
+      "public" : null,
+      "snapshot_id" : "39ttMigrSV3YKUL45JU6bQmJmlbpm3kTJ0z+dKShlFu7X7Dk+ksIXjmx4J6X5Lqo",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/casperius/playlists/05k7PplHIBP9j1u1Lv7RRi/tracks",
+        "total" : 251
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:casperius:playlist:05k7PplHIBP9j1u1Lv7RRi"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/1174972373/playlist/7xBH6HAUcaxLpAK5xv0Gso"
+      },
+      "href" : "https://api.spotify.com/v1/users/1174972373/playlists/7xBH6HAUcaxLpAK5xv0Gso",
+      "id" : "7xBH6HAUcaxLpAK5xv0Gso",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/f7a16337ed39ad91bef6ec112eee03686b81e13964520a35db5ecfa962c69a7cc84619d92304aa0a7f1d02361e35a654400557ce7c26f9a9005a17bbf5f7be243b7326a583c057317f964752c5ce39fb",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/f7a16337ed39ad91bef6ec112eee03686b81e13964520a35db5ecfa962c69a7cc84619d92304aa0a7f1d02361e35a654400557ce7c26f9a9005a17bbf5f7be243b7326a583c057317f964752c5ce39fb",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/f7a16337ed39ad91bef6ec112eee03686b81e13964520a35db5ecfa962c69a7cc84619d92304aa0a7f1d02361e35a654400557ce7c26f9a9005a17bbf5f7be243b7326a583c057317f964752c5ce39fb",
+        "width" : 60
+      } ],
+      "name" : "Alternative Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/1174972373"
+        },
+        "href" : "https://api.spotify.com/v1/users/1174972373",
+        "id" : "1174972373",
+        "type" : "user",
+        "uri" : "spotify:user:1174972373"
+      },
+      "public" : null,
+      "snapshot_id" : "A51DU5LB3Lj8VQKBqAD4r42SvpzWq+5sA+s77ZWQkNsnWMbruwK6uDt3uUqJCv8i",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/1174972373/playlists/7xBH6HAUcaxLpAK5xv0Gso/tracks",
+        "total" : 356
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:1174972373:playlist:7xBH6HAUcaxLpAK5xv0Gso"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/stevenoss/playlist/1t87DF4KAj9Vuz9QILyCQP"
+      },
+      "href" : "https://api.spotify.com/v1/users/stevenoss/playlists/1t87DF4KAj9Vuz9QILyCQP",
+      "id" : "1t87DF4KAj9Vuz9QILyCQP",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/6e74064fc241d527f66de783229308eb551e5344e94ebcf0f79a4c34568af23d4740345f89f800d334d2bbb6882ba0742613a6b95bf8e91a92c08f7bc698159cfabaafb7b823577161841dbc01b248fd",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/6e74064fc241d527f66de783229308eb551e5344e94ebcf0f79a4c34568af23d4740345f89f800d334d2bbb6882ba0742613a6b95bf8e91a92c08f7bc698159cfabaafb7b823577161841dbc01b248fd",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/6e74064fc241d527f66de783229308eb551e5344e94ebcf0f79a4c34568af23d4740345f89f800d334d2bbb6882ba0742613a6b95bf8e91a92c08f7bc698159cfabaafb7b823577161841dbc01b248fd",
+        "width" : 60
+      } ],
+      "name" : "Acoustic Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/stevenoss"
+        },
+        "href" : "https://api.spotify.com/v1/users/stevenoss",
+        "id" : "stevenoss",
+        "type" : "user",
+        "uri" : "spotify:user:stevenoss"
+      },
+      "public" : null,
+      "snapshot_id" : "XVK/YTKeYDZeaXYnvQ5LnGSzaoLHWwLNoQf7ruS+H2KXMhhjb+oKCV7mH87IcVoj",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/stevenoss/playlists/1t87DF4KAj9Vuz9QILyCQP/tracks",
+        "total" : 225
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:stevenoss:playlist:1t87DF4KAj9Vuz9QILyCQP"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/spotifyenespa%C3%B1ol/playlist/1THbdIWX0mi4AzoCrFdl6t"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotifyenespa%C3%B1ol/playlists/1THbdIWX0mi4AzoCrFdl6t",
+      "id" : "1THbdIWX0mi4AzoCrFdl6t",
+      "images" : [ {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/89390b7ed46f214c448cfb663be72769a2154f4a",
+        "width" : 300
+      } ],
+      "name" : "Work con Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/spotifyenespa%C3%B1ol"
+        },
+        "href" : "https://api.spotify.com/v1/users/spotifyenespa%C3%B1ol",
+        "id" : "spotifyenespañol",
+        "type" : "user",
+        "uri" : "spotify:user:spotifyenespa%C3%B1ol"
+      },
+      "public" : null,
+      "snapshot_id" : "PI1oGO0d5UTCXY2zJtt7Zzm0+9nv42Eclh1InA6OofyEm5F8l9Y3K+THwQjcAvgt",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/spotifyenespa%C3%B1ol/playlists/1THbdIWX0mi4AzoCrFdl6t/tracks",
+        "total" : 100
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:spotifyenespa%C3%B1ol:playlist:1THbdIWX0mi4AzoCrFdl6t"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/spotify/playlist/0lbtgFu3JNKX77J5YOpW7n"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify/playlists/0lbtgFu3JNKX77J5YOpW7n",
+      "id" : "0lbtgFu3JNKX77J5YOpW7n",
+      "images" : [ {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/fbf72d720f6d4aa30f4bd1a0ef071e04e864333e",
+        "width" : 300
+      } ],
+      "name" : "Top of the Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/spotify"
+        },
+        "href" : "https://api.spotify.com/v1/users/spotify",
+        "id" : "spotify",
+        "type" : "user",
+        "uri" : "spotify:user:spotify"
+      },
+      "public" : null,
+      "snapshot_id" : "0DNIBh9Wc7HaxG/9VE/W2XjPbrF/K7BOSXFT/kuTqb6c3cSuHzzp+UV3qVc8Nvl8",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/spotify/playlists/0lbtgFu3JNKX77J5YOpW7n/tracks",
+        "total" : 50
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:spotify:playlist:0lbtgFu3JNKX77J5YOpW7n"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/11151422577/playlist/3fXgpaTM02EykQnWTAVQVr"
+      },
+      "href" : "https://api.spotify.com/v1/users/11151422577/playlists/3fXgpaTM02EykQnWTAVQVr",
+      "id" : "3fXgpaTM02EykQnWTAVQVr",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/0b5f9863a891f7f84df2f72aa5d6f51b25c72d17c323fa3531febde5e9833227c867dedf1af58ff6825aef078ca8b25863e1640650bb7d72246d828c2b6e2cac379370ce9ffad9ba3b08f07d18f32993",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/0b5f9863a891f7f84df2f72aa5d6f51b25c72d17c323fa3531febde5e9833227c867dedf1af58ff6825aef078ca8b25863e1640650bb7d72246d828c2b6e2cac379370ce9ffad9ba3b08f07d18f32993",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/0b5f9863a891f7f84df2f72aa5d6f51b25c72d17c323fa3531febde5e9833227c867dedf1af58ff6825aef078ca8b25863e1640650bb7d72246d828c2b6e2cac379370ce9ffad9ba3b08f07d18f32993",
+        "width" : 60
+      } ],
+      "name" : "Rock Nacional    ",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/11151422577"
+        },
+        "href" : "https://api.spotify.com/v1/users/11151422577",
+        "id" : "11151422577",
+        "type" : "user",
+        "uri" : "spotify:user:11151422577"
+      },
+      "public" : null,
+      "snapshot_id" : "5BY/ADuRafCzME+4Z3wGjDKcNIaTYAxRC2tU6r3qSaB+LdpYTDPXFHff4cm6NH8+",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/11151422577/playlists/3fXgpaTM02EykQnWTAVQVr/tracks",
+        "total" : 402
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:11151422577:playlist:3fXgpaTM02EykQnWTAVQVr"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/1272709005/playlist/4XFs6GWF8STSxDvTW3HfUi"
+      },
+      "href" : "https://api.spotify.com/v1/users/1272709005/playlists/4XFs6GWF8STSxDvTW3HfUi",
+      "id" : "4XFs6GWF8STSxDvTW3HfUi",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/2bf5c5f012914abcdd30a8fbfd0f8e45bbab5d440a36856fb17b786018d07d6eb0842598d205bf866907a320dfb3c596d57489d5e0445683134eb3717a22410fe5b453c386de5f51976ec728df56d57d",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/2bf5c5f012914abcdd30a8fbfd0f8e45bbab5d440a36856fb17b786018d07d6eb0842598d205bf866907a320dfb3c596d57489d5e0445683134eb3717a22410fe5b453c386de5f51976ec728df56d57d",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/2bf5c5f012914abcdd30a8fbfd0f8e45bbab5d440a36856fb17b786018d07d6eb0842598d205bf866907a320dfb3c596d57489d5e0445683134eb3717a22410fe5b453c386de5f51976ec728df56d57d",
+        "width" : 60
+      } ],
+      "name" : "Hard rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/1272709005"
+        },
+        "href" : "https://api.spotify.com/v1/users/1272709005",
+        "id" : "1272709005",
+        "type" : "user",
+        "uri" : "spotify:user:1272709005"
+      },
+      "public" : null,
+      "snapshot_id" : "2BCitWYoHV7szOEH2RtdSxXDfFLM3xLEV+v9jRldaJjTJl6nxpuWuU/CFC2+Q1Gm",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/1272709005/playlists/4XFs6GWF8STSxDvTW3HfUi/tracks",
+        "total" : 488
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:1272709005:playlist:4XFs6GWF8STSxDvTW3HfUi"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/sebastien.gautier/playlist/5Z6HJD7JSrSw4pGWsyxdqw"
+      },
+      "href" : "https://api.spotify.com/v1/users/sebastien.gautier/playlists/5Z6HJD7JSrSw4pGWsyxdqw",
+      "id" : "5Z6HJD7JSrSw4pGWsyxdqw",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/41bf5fd8af79fc837d9bde387468f9c29a2fc7557a4b69f14af0e0934ac5901e2e7325b42636c8fa400e647d01d9184c2f116fd6d5a28f20fbb45065afaf66496a6ee0edccb35d05df9980e9800fbb1e",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/41bf5fd8af79fc837d9bde387468f9c29a2fc7557a4b69f14af0e0934ac5901e2e7325b42636c8fa400e647d01d9184c2f116fd6d5a28f20fbb45065afaf66496a6ee0edccb35d05df9980e9800fbb1e",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/41bf5fd8af79fc837d9bde387468f9c29a2fc7557a4b69f14af0e0934ac5901e2e7325b42636c8fa400e647d01d9184c2f116fd6d5a28f20fbb45065afaf66496a6ee0edccb35d05df9980e9800fbb1e",
+        "width" : 60
+      } ],
+      "name" : "PUNK ROCK",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/sebastien.gautier"
+        },
+        "href" : "https://api.spotify.com/v1/users/sebastien.gautier",
+        "id" : "sebastien.gautier",
+        "type" : "user",
+        "uri" : "spotify:user:sebastien.gautier"
+      },
+      "public" : null,
+      "snapshot_id" : "92uJIwDAQzO6uEXWu5p8PVMQavWLQ+w+T6aU5zxkbJ9KehB8z9FU0TZIWy3y2yBl",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/sebastien.gautier/playlists/5Z6HJD7JSrSw4pGWsyxdqw/tracks",
+        "total" : 721
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:sebastien.gautier:playlist:5Z6HJD7JSrSw4pGWsyxdqw"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/12152040383/playlist/13aRQoWoqNeTlPwHBxA8l8"
+      },
+      "href" : "https://api.spotify.com/v1/users/12152040383/playlists/13aRQoWoqNeTlPwHBxA8l8",
+      "id" : "13aRQoWoqNeTlPwHBxA8l8",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/179aa80ad0b080ada241be5b6fd8a12474d7dcb1bbd1f19477ee2cb30c1ae9cece461b156d2bb48d585e44abfa890e510c3e1405217ce29ec53f5d1334633af0a6ce008a9aed627d416768b42b8faf9e",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/179aa80ad0b080ada241be5b6fd8a12474d7dcb1bbd1f19477ee2cb30c1ae9cece461b156d2bb48d585e44abfa890e510c3e1405217ce29ec53f5d1334633af0a6ce008a9aed627d416768b42b8faf9e",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/179aa80ad0b080ada241be5b6fd8a12474d7dcb1bbd1f19477ee2cb30c1ae9cece461b156d2bb48d585e44abfa890e510c3e1405217ce29ec53f5d1334633af0a6ce008a9aed627d416768b42b8faf9e",
+        "width" : 60
+      } ],
+      "name" : "classic rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/12152040383"
+        },
+        "href" : "https://api.spotify.com/v1/users/12152040383",
+        "id" : "12152040383",
+        "type" : "user",
+        "uri" : "spotify:user:12152040383"
+      },
+      "public" : null,
+      "snapshot_id" : "po6ykj3Pdn7oDzrfL1xzT7ubghOfhANwHJT5LXxpx2yW+IafsGxYaj01ij0UDRgf",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/12152040383/playlists/13aRQoWoqNeTlPwHBxA8l8/tracks",
+        "total" : 135
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:12152040383:playlist:13aRQoWoqNeTlPwHBxA8l8"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/inkey666/playlist/26dWT2TLailEuZ3nWvjZmu"
+      },
+      "href" : "https://api.spotify.com/v1/users/inkey666/playlists/26dWT2TLailEuZ3nWvjZmu",
+      "id" : "26dWT2TLailEuZ3nWvjZmu",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/713811942364b5656bf604e2b3f514d3781b5ba07b3ce8a48c5128029a8acc8fce5d9916f48e2ffb991c32cbbbdd3d1dc39567c81fcac588c91b184e8f917732111dae373b85ee8264660f7deeb8348d",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/713811942364b5656bf604e2b3f514d3781b5ba07b3ce8a48c5128029a8acc8fce5d9916f48e2ffb991c32cbbbdd3d1dc39567c81fcac588c91b184e8f917732111dae373b85ee8264660f7deeb8348d",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/713811942364b5656bf604e2b3f514d3781b5ba07b3ce8a48c5128029a8acc8fce5d9916f48e2ffb991c32cbbbdd3d1dc39567c81fcac588c91b184e8f917732111dae373b85ee8264660f7deeb8348d",
+        "width" : 60
+      } ],
+      "name" : "Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/inkey666"
+        },
+        "href" : "https://api.spotify.com/v1/users/inkey666",
+        "id" : "inkey666",
+        "type" : "user",
+        "uri" : "spotify:user:inkey666"
+      },
+      "public" : null,
+      "snapshot_id" : "6y3geNdl0VM6QSoeCAfB7s7gosxQCk2oSvgOkF3pBZAgAcgtw5pXRE/zkiG7jGq6",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/inkey666/playlists/26dWT2TLailEuZ3nWvjZmu/tracks",
+        "total" : 2754
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:inkey666:playlist:26dWT2TLailEuZ3nWvjZmu"
+    }, {
+      "collaborative" : false,
+      "external_urls" : {
+        "spotify" : "http://open.spotify.com/user/122202588/playlist/6bNWCAtBdUx0dD5wqGQDyF"
+      },
+      "href" : "https://api.spotify.com/v1/users/122202588/playlists/6bNWCAtBdUx0dD5wqGQDyF",
+      "id" : "6bNWCAtBdUx0dD5wqGQDyF",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://mosaic.scdn.co/640/8cc7c103b5b9972fadacd01715aa52c820c6f565c32c828af2b4f107b333814cc0e9dc729f8f72dafb9778d09527eb5251b86d604912396813f22fc82baeb3c573297976052d0b75bd6f8397cec87c7d",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://mosaic.scdn.co/300/8cc7c103b5b9972fadacd01715aa52c820c6f565c32c828af2b4f107b333814cc0e9dc729f8f72dafb9778d09527eb5251b86d604912396813f22fc82baeb3c573297976052d0b75bd6f8397cec87c7d",
+        "width" : 300
+      }, {
+        "height" : 60,
+        "url" : "https://mosaic.scdn.co/60/8cc7c103b5b9972fadacd01715aa52c820c6f565c32c828af2b4f107b333814cc0e9dc729f8f72dafb9778d09527eb5251b86d604912396813f22fc82baeb3c573297976052d0b75bd6f8397cec87c7d",
+        "width" : 60
+      } ],
+      "name" : "Rock",
+      "owner" : {
+        "external_urls" : {
+          "spotify" : "http://open.spotify.com/user/122202588"
+        },
+        "href" : "https://api.spotify.com/v1/users/122202588",
+        "id" : "122202588",
+        "type" : "user",
+        "uri" : "spotify:user:122202588"
+      },
+      "public" : null,
+      "snapshot_id" : "nmf0xK55sYeuYD5oFU/LeGghLOmvlweYWqPW+/e4vHXC6xSFHywOOOUNJ81ynxyu",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/users/122202588/playlists/6bNWCAtBdUx0dD5wqGQDyF/tracks",
+        "total" : 184
+      },
+      "type" : "playlist",
+      "uri" : "spotify:user:122202588:playlist:6bNWCAtBdUx0dD5wqGQDyF"
+    } ],
+    "limit" : 20,
+    "next" : "https://api.spotify.com/v1/search?query=Rock&offset=20&limit=20&type=playlist&market=US",
+    "offset" : 0,
+    "previous" : null,
+    "total" : 43657
+  }
+}

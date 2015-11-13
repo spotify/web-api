@@ -1,0 +1,17 @@
+#%RAML 1.0 DataType
+type: object
+displayName: Simple Artist Object
+properties:
+  external_urls: ExternalUrl
+  href:
+    type: string
+    description: A link to the Web API endpoint providing full details of the artist.
+  id: SpotifyId
+  name:
+    type: string
+    description: The name of the artist.
+  type:
+    type: string
+    default: "artist"
+    description: The object type: "artist"
+  uri: SpotifyUri

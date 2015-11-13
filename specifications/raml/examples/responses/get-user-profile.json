@@ -1,0 +1,19 @@
+{
+  "display_name" : null,
+  "external_urls" : {
+    "spotify" : "https://open.spotify.com/user/wizzler"
+  },
+  "followers" : {
+    "href" : null,
+    "total" : 1
+  },
+  "href" : "https://api.spotify.com/v1/users/wizzler",
+  "id" : "wizzler",
+  "images" : [ {
+    "height" : null,
+    "url" : "http://asset-a.soup.io/asset/4080/0738_ad2b.gif",
+    "width" : null
+  } ],
+  "type" : "user",
+  "uri" : "spotify:user:wizzler"
+}

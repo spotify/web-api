@@ -1,0 +1,37 @@
+{
+  "collaborative" : false,
+  "description" : null,
+  "external_urls" : {
+    "spotify" : "http://open.spotify.com/user/econchick/playlist/0t22nYJEipZm9xbq4KWhIz"
+  },
+  "followers" : {
+    "href" : null,
+    "total" : 0
+  },
+  "href" : "https://api.spotify.com/v1/users/econchick/playlists/0t22nYJEipZm9xbq4KWhIz",
+  "id" : "0t22nYJEipZm9xbq4KWhIz",
+  "images" : [ ],
+  "name" : "New Playlist",
+  "owner" : {
+    "external_urls" : {
+      "spotify" : "http://open.spotify.com/user/econchick"
+    },
+    "href" : "https://api.spotify.com/v1/users/econchick",
+    "id" : "econchick",
+    "type" : "user",
+    "uri" : "spotify:user:econchick"
+  },
+  "public" : false,
+  "snapshot_id" : "W6ymxkqi5z5xZfU4jPfkGmpI7IOzTeo0flaA737S27CtTfAvswjRuhV+yUFkqV90",
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/users/econchick/playlists/0t22nYJEipZm9xbq4KWhIz/tracks",
+    "items" : [ ],
+    "limit" : 100,
+    "next" : null,
+    "offset" : 0,
+    "previous" : null,
+    "total" : 0
+  },
+  "type" : "playlist",
+  "uri" : "spotify:user:econchick:playlist:0t22nYJEipZm9xbq4KWhIz"
+}

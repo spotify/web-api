@@ -1,0 +1,21 @@
+#%RAML 1.0 DataType
+type: object
+displayName: Public User Object
+properties:
+  display_name:
+    type: string
+    description: |
+      The name displayed on the user's profile. `null` if not available.
+  external_urls: ExternalUrl
+  followers: Followers
+  href:
+    type: string
+    description: A link to the Web API endpoint for this user.
+  id: SpotifyUserId
+  images:
+    type: Image[]
+    description: The user's profile image.
+  type:
+    type: string
+    description: The object type: "user".
+  uri: SpotifyUri

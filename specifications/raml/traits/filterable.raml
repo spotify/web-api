@@ -1,0 +1,7 @@
+#%RAML 1.0 Trait
+queryParameters:
+  fields:
+    displayName: Fields
+    type: string
+    description: A comma-separated list of fields to filter query
+    example: items(added_by.id,track(name,href,album(name,href)))

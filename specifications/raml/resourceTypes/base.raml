@@ -1,0 +1,14 @@
+#%RAML 1.0 ResourceType
+get?: &common
+  headers:
+    Accept:
+      description: It is used to set specified media type.
+      type: string
+  responses:
+    429:
+      description: |
+        API rate limit exceeded. See http://developer.spotify.com/web-api/
+        user-guide/#rate-limiting for details.
+post?: *common
+put?: *common
+delete?: *common
