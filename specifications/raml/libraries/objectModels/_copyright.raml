@@ -1,0 +1,13 @@
+#%RAML 1.0 DataType
+type: object
+displayName: Copyright
+properties:
+  text:
+    type: string
+    description: The copyright text for this album.
+  type:
+    type: string
+    enum: ["C", "P"]
+    description: |
+      The type of copyright: C = the copyright, P = the sound recording
+      (performance) copyright.

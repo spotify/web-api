@@ -1,0 +1,33 @@
+#%RAML 1.0 DataType
+type: AlbumSimple
+displayName: Full Album Object
+properties:
+  artists: ArtistSimple[]
+  copyrights: Copyright[]
+  external_ids: ExternalId
+  genres:
+    type: string[]
+    description: |
+      A list of the genres used to classify the album. If not yet classified,
+      the array is empty.
+    example: ["Prog Rock", "Post-Grunge"]
+  popularity:
+    type: integer
+    description: |
+      The popularity of the album. The value will be between 0 and 100,
+      with 100 being the most popular. The popularity is calculated from
+      the popularity of the album's individual tracks.
+  release_date:
+    type: string
+    description: |
+      The date the album was first released, for example "1981-12-15".
+      Depending on the precision, it might be shown as "1981" or
+      "1981-12".
+  release_date_precision:
+    type: string
+    enum: ["year", "month", "day"]
+    description: The precision with which `release_date` value is known.
+  tracks:
+    type: Page
+    (pagedObject): TrackSimple
+    description: The tracks of the album.

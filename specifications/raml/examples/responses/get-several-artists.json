@@ -1,0 +1,95 @@
+{
+  "artists" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/2CIMQHirSU0MQqyYHq0eOx"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 1287444
+    },
+    "genres" : [ "edm", "electro house", "house", "progressive house" ],
+    "href" : "https://api.spotify.com/v1/artists/2CIMQHirSU0MQqyYHq0eOx",
+    "id" : "2CIMQHirSU0MQqyYHq0eOx",
+    "images" : [ {
+      "height" : 500,
+      "url" : "https://i.scdn.co/image/fb16e7994c9b8b7df57a2fca8a965c9993c4fb52",
+      "width" : 500
+    }, {
+      "height" : 200,
+      "url" : "https://i.scdn.co/image/37a3f370e3d210b59174b2aee573816a2b23fda1",
+      "width" : 200
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/918c1043d66e597beb0adc7cf611775e625c4f93",
+      "width" : 64
+    } ],
+    "name" : "deadmau5",
+    "popularity" : 73,
+    "type" : "artist",
+    "uri" : "spotify:artist:2CIMQHirSU0MQqyYHq0eOx"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/57dN52uHvrHOxijzpIgu3E"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 261439
+    },
+    "genres" : [ ],
+    "href" : "https://api.spotify.com/v1/artists/57dN52uHvrHOxijzpIgu3E",
+    "id" : "57dN52uHvrHOxijzpIgu3E",
+    "images" : [ {
+      "height" : 693,
+      "url" : "https://i.scdn.co/image/2f0c6c465a83cd196e651e3d4e7625ba799a6f60",
+      "width" : 1000
+    }, {
+      "height" : 444,
+      "url" : "https://i.scdn.co/image/4e3e13c8b993bde9898e49509fb9ae121636e05f",
+      "width" : 640
+    }, {
+      "height" : 139,
+      "url" : "https://i.scdn.co/image/dc68dd24b45b74ecce9d4ed486423673d683ced3",
+      "width" : 200
+    }, {
+      "height" : 44,
+      "url" : "https://i.scdn.co/image/4e55ca05d4f336a2fa0e3062a7ec9778a201e8bc",
+      "width" : 63
+    } ],
+    "name" : "Ratatat",
+    "popularity" : 72,
+    "type" : "artist",
+    "uri" : "spotify:artist:57dN52uHvrHOxijzpIgu3E"
+  }, {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/1vCWHaC5f2uS3yhpwWbIA6"
+    },
+    "followers" : {
+      "href" : null,
+      "total" : 4420615
+    },
+    "genres" : [ "big room", "edm", "electro house", "house", "progressive electro house" ],
+    "href" : "https://api.spotify.com/v1/artists/1vCWHaC5f2uS3yhpwWbIA6",
+    "id" : "1vCWHaC5f2uS3yhpwWbIA6",
+    "images" : [ {
+      "height" : 686,
+      "url" : "https://i.scdn.co/image/886965d33b3e1e469d24f3a8e44374b1e19d3055",
+      "width" : 1000
+    }, {
+      "height" : 439,
+      "url" : "https://i.scdn.co/image/b34ff69e37a8e5ceed9568b1e817b88d6c2691dd",
+      "width" : 640
+    }, {
+      "height" : 137,
+      "url" : "https://i.scdn.co/image/5a4f940347ac9bc42405a3c66531b7c1cb25efa0",
+      "width" : 200
+    }, {
+      "height" : 44,
+      "url" : "https://i.scdn.co/image/3e77006dc092166fee8b9004e4e1e1fabc045d93",
+      "width" : 64
+    } ],
+    "name" : "Avicii",
+    "popularity" : 91,
+    "type" : "artist",
+    "uri" : "spotify:artist:1vCWHaC5f2uS3yhpwWbIA6"
+  } ]
+}

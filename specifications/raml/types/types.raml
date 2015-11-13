@@ -1,0 +1,47 @@
+#%RAML 1.0
+SpotifyId:
+  displayName: Spotify ID
+  type: string
+  pattern: ^[A-Za-z0-9]+
+  description: |
+    The base-62 identifier that you can find at the end of the Spotify URI (see
+    Spotify URI) for an artist, track, album, playlist, etc. Unlike a Spotify
+    URI, a Spotify ID does not clearly identify the type of resource; that
+    information is provided elsewhere in the call.
+  example: 6rqhFgbbKwnb9MLmUQDhG6
+SpotifyCategoryId:
+  displayName: Spotify Category ID
+  type: string
+  pattern: ^[A-Za-z0-9]+
+  description: |
+    The unique string identifying the Spotify category that you can find at the
+    end of the Spotify URI for the category.
+  example: party
+SpotifyUri:
+  displayName: Spotify URI
+  type: string
+  pattern: ^(spotify:)(track|album|artist):[a-zA-Z0-9]+
+  description: |
+    The resource identifier that you can enter, for example, in the Spotify
+    Desktop client's search box to locate an artist, album, or track. To find
+    a Spotify URI simply right-click (on Windows) or Ctrl-Click (on a Mac) on
+    the artist's or album's or track's name
+  example: spotify:track:6rqhFgbbKwnb9MLmUQDhG6
+SpotifyUrl:
+  displayName: Spotify URL
+  type: string
+  pattern: ^htt[p|ps]://open.spotify.com/(track|user|album|artist)/([a-zA-Z0-9]+)
+  description: |
+    An HTML link that opens a track, album, app, playlist or other Spotify
+    resource in a Spotify client (which client is determined by the user's
+    device and account settings at play.spotify.com).
+  example: http://open.spotify.com/track/6rqhFgbbKwnb9MLmUQDhG6
+SpotifyUserId:
+  type: string
+  displayName: Spotify User ID
+  pattern: ^[a-zA-Z0-9]+
+  description: |
+    The unique string identifying the Spotify user that you can find at the
+    end of the Spotify URI for the user. The ID of the current user can be
+    obtained via the Web API endpoint https://api.spotify.com/v1/me.
+  example: wizzler

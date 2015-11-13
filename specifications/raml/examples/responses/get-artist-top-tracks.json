@@ -1,0 +1,678 @@
+{
+  "tracks" : [ {
+    "album" : {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+      "id" : "4EUf4YyNjuXypWY6W5wEDm",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/835884befb1b595476e590e656f27b3ec028308b",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/b3074557f3c45bb3a2c9884ecbfeb692f3c51be4",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/6dc754ec4bc27563dc707fb2178a55c71b7352c9",
+        "width" : 64
+      } ],
+      "name" : "Globalization",
+      "type" : "album",
+      "uri" : "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj"
+      },
+      "href" : "https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj",
+      "id" : "21E3waRsmPlU7jZsS13rcj",
+      "name" : "Ne-Yo",
+      "type" : "artist",
+      "uri" : "spotify:artist:21E3waRsmPlU7jZsS13rcj"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 229360,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USRC11402647"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2bJvI42r8EF3wxjOuDav4r"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2bJvI42r8EF3wxjOuDav4r",
+    "id" : "2bJvI42r8EF3wxjOuDav4r",
+    "name" : "Time of Our Lives",
+    "popularity" : 85,
+    "preview_url" : "https://p.scdn.co/mp3-preview/456046f512b8da97b84928f67cf9d8b2594db484",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:2bJvI42r8EF3wxjOuDav4r"
+  }, {
+    "album" : {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+      "id" : "4EUf4YyNjuXypWY6W5wEDm",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/835884befb1b595476e590e656f27b3ec028308b",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/b3074557f3c45bb3a2c9884ecbfeb692f3c51be4",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/6dc754ec4bc27563dc707fb2178a55c71b7352c9",
+        "width" : 64
+      } ],
+      "name" : "Globalization",
+      "type" : "album",
+      "uri" : "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/7bXgB6jMjp9ATFy66eO08Z"
+      },
+      "href" : "https://api.spotify.com/v1/artists/7bXgB6jMjp9ATFy66eO08Z",
+      "id" : "7bXgB6jMjp9ATFy66eO08Z",
+      "name" : "Chris Brown",
+      "type" : "artist",
+      "uri" : "spotify:artist:7bXgB6jMjp9ATFy66eO08Z"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 202306,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USRC11402646"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6Zo3wgDE076K2AuiGZF3CS"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6Zo3wgDE076K2AuiGZF3CS",
+    "id" : "6Zo3wgDE076K2AuiGZF3CS",
+    "name" : "Fun",
+    "popularity" : 82,
+    "preview_url" : "https://p.scdn.co/mp3-preview/ebac4a9d141c2cb23a70a0c9812c4db5abdf8e9a",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:6Zo3wgDE076K2AuiGZF3CS"
+  }, {
+    "album" : {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DO", "EC", "EE", "ES", "FI", "FR", "GR", "GT", "HK", "HN", "HU", "IE", "IT", "LI", "LT", "LV", "MC", "MT", "MX", "MY", "NI", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/3X33e7UII5loqrEgauOKEC"
+      },
+      "href" : "https://api.spotify.com/v1/albums/3X33e7UII5loqrEgauOKEC",
+      "id" : "3X33e7UII5loqrEgauOKEC",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/c171113a197828a6ee8017d1ede2e78c9a7df654",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/de50cbd4f0e62be8d4ffd11c7d6f3c59d964bdb6",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/5a18558e39d542ec9d71345daafe89d5862aa67a",
+        "width" : 64
+      } ],
+      "name" : "Timber",
+      "type" : "album",
+      "uri" : "spotify:album:3X33e7UII5loqrEgauOKEC"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+      "id" : "6LqNN22kT3074XbTVUrhzX",
+      "name" : "Ke$ha",
+      "type" : "artist",
+      "uri" : "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DO", "EC", "EE", "ES", "FI", "FR", "GR", "GT", "HK", "HN", "HU", "IE", "IT", "LI", "LT", "LV", "MC", "MT", "MX", "MY", "NI", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 204053,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USRC11301695"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1zHlj4dQ8ZAtrayhuDDmkY"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1zHlj4dQ8ZAtrayhuDDmkY",
+    "id" : "1zHlj4dQ8ZAtrayhuDDmkY",
+    "name" : "Timber",
+    "popularity" : 77,
+    "preview_url" : "https://p.scdn.co/mp3-preview/ecb1639c58ceb6311919373fe56399e3ec242045",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:1zHlj4dQ8ZAtrayhuDDmkY"
+  }, {
+    "album" : {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+      "id" : "4EUf4YyNjuXypWY6W5wEDm",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/835884befb1b595476e590e656f27b3ec028308b",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/b3074557f3c45bb3a2c9884ecbfeb692f3c51be4",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/6dc754ec4bc27563dc707fb2178a55c71b7352c9",
+        "width" : 64
+      } ],
+      "name" : "Globalization",
+      "type" : "album",
+      "uri" : "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/02vdR0APmv7kuQA2HUlA92"
+      },
+      "href" : "https://api.spotify.com/v1/artists/02vdR0APmv7kuQA2HUlA92",
+      "id" : "02vdR0APmv7kuQA2HUlA92",
+      "name" : "John Ryan",
+      "type" : "artist",
+      "uri" : "spotify:artist:02vdR0APmv7kuQA2HUlA92"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 236200,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USRC11401783"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4Y7XAxTANhu3lmnLAzhWJW"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4Y7XAxTANhu3lmnLAzhWJW",
+    "id" : "4Y7XAxTANhu3lmnLAzhWJW",
+    "name" : "Fireball",
+    "popularity" : 73,
+    "preview_url" : "https://p.scdn.co/mp3-preview/4f2949aea7c9b2a77a79c297fe67aa73793a568c",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:4Y7XAxTANhu3lmnLAzhWJW"
+  }, {
+    "album" : {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "BE", "BG", "CY", "CZ", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "HU", "IE", "IS", "IT", "LT", "LU", "LV", "MC", "MT", "NL", "NO", "PL", "PT", "RO", "SE", "SI", "SK", "TR" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/67PTz2RQnuh6fRf1JgxUI7"
+      },
+      "href" : "https://api.spotify.com/v1/albums/67PTz2RQnuh6fRf1JgxUI7",
+      "id" : "67PTz2RQnuh6fRf1JgxUI7",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/cc6c9be0e7d92b6779e1ac1346fcd40bf90102ca",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/1204a4b52bede0594311d5f48ee9b6f6546df7de",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/22e7aab55c81274bbcc1eb03df0bbbfe40891c75",
+        "width" : 64
+      } ],
+      "name" : "Dale",
+      "type" : "album",
+      "uri" : "spotify:album:67PTz2RQnuh6fRf1JgxUI7"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/37GUqxafAvAKGMZbXCUnmr"
+      },
+      "href" : "https://api.spotify.com/v1/artists/37GUqxafAvAKGMZbXCUnmr",
+      "id" : "37GUqxafAvAKGMZbXCUnmr",
+      "name" : "Mohombi",
+      "type" : "artist",
+      "uri" : "spotify:artist:37GUqxafAvAKGMZbXCUnmr"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3E6xrwgnVfYCrCs0ePERDz"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3E6xrwgnVfYCrCs0ePERDz",
+      "id" : "3E6xrwgnVfYCrCs0ePERDz",
+      "name" : "Wisin",
+      "type" : "artist",
+      "uri" : "spotify:artist:3E6xrwgnVfYCrCs0ePERDz"
+    } ],
+    "available_markets" : [ "AD", "BE", "BG", "CY", "CZ", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "HU", "IE", "IS", "IT", "LT", "LU", "LV", "MC", "MT", "NL", "NO", "PL", "PT", "RO", "SE", "SI", "SK", "TR" ],
+    "disc_number" : 1,
+    "duration_ms" : 183906,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USNPW1500192"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6LhIXRkhqv1PVj4kJtnLxS"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6LhIXRkhqv1PVj4kJtnLxS",
+    "id" : "6LhIXRkhqv1PVj4kJtnLxS",
+    "name" : "Baddest Girl in Town",
+    "popularity" : 63,
+    "preview_url" : "https://p.scdn.co/mp3-preview/e12b702d75c6f304d074be553d6d2daad243969a",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:6LhIXRkhqv1PVj4kJtnLxS"
+  }, {
+    "album" : {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4rG0MhkU6UojACJxkMHIXB"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4rG0MhkU6UojACJxkMHIXB",
+      "id" : "4rG0MhkU6UojACJxkMHIXB",
+      "images" : [ {
+        "height" : 636,
+        "url" : "https://i.scdn.co/image/1dcac421f3ddb49cb12a007929bbc4733d5c3b96",
+        "width" : 640
+      }, {
+        "height" : 298,
+        "url" : "https://i.scdn.co/image/af821d65c1a0a08488ac480247f0b6a77f13f96f",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/0feadca0eaa45ca2de6662c20b2344b8e6cd65b5",
+        "width" : 64
+      } ],
+      "name" : "Planet Pit (Deluxe Version)",
+      "type" : "album",
+      "uri" : "spotify:album:4rG0MhkU6UojACJxkMHIXB"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj"
+      },
+      "href" : "https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj",
+      "id" : "21E3waRsmPlU7jZsS13rcj",
+      "name" : "Ne-Yo",
+      "type" : "artist",
+      "uri" : "spotify:artist:21E3waRsmPlU7jZsS13rcj"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4D75GcNG95ebPtNvoNVXhz"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4D75GcNG95ebPtNvoNVXhz",
+      "id" : "4D75GcNG95ebPtNvoNVXhz",
+      "name" : "Afrojack",
+      "type" : "artist",
+      "uri" : "spotify:artist:4D75GcNG95ebPtNvoNVXhz"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1ruutHJcECI7cos2n5TqpO"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1ruutHJcECI7cos2n5TqpO",
+      "id" : "1ruutHJcECI7cos2n5TqpO",
+      "name" : "Nayer",
+      "type" : "artist",
+      "uri" : "spotify:artist:1ruutHJcECI7cos2n5TqpO"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 252306,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USJAY1100032"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4QNpBfC0zvjKqPJcyqBy9W"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4QNpBfC0zvjKqPJcyqBy9W",
+    "id" : "4QNpBfC0zvjKqPJcyqBy9W",
+    "name" : "Give Me Everything",
+    "popularity" : 72,
+    "preview_url" : "https://p.scdn.co/mp3-preview/ca42c116bedd994141b8d697ba7d7cf1b521cb2f",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:4QNpBfC0zvjKqPJcyqBy9W"
+  }, {
+    "album" : {
+      "album_type" : "compilation",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/717UG2du6utFe7CdmpuUe3"
+      },
+      "href" : "https://api.spotify.com/v1/albums/717UG2du6utFe7CdmpuUe3",
+      "id" : "717UG2du6utFe7CdmpuUe3",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/c1dffff58490dfc01df180756750937d67890528",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/17bf0149fd6f7798ea58f9d16bdb4eed000f1452",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/ac8ed423bf555fa8a2caa7601b9341a42a4c3246",
+        "width" : 64
+      } ],
+      "name" : "Reggaeton!",
+      "type" : "album",
+      "uri" : "spotify:album:717UG2du6utFe7CdmpuUe3"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4VMYDCV2IEDYJArk749S6m"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4VMYDCV2IEDYJArk749S6m",
+      "id" : "4VMYDCV2IEDYJArk749S6m",
+      "name" : "Daddy Yankee",
+      "type" : "artist",
+      "uri" : "spotify:artist:4VMYDCV2IEDYJArk749S6m"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/7sfl4Xt5KmfyDs2T3SVSMK"
+      },
+      "href" : "https://api.spotify.com/v1/artists/7sfl4Xt5KmfyDs2T3SVSMK",
+      "id" : "7sfl4Xt5KmfyDs2T3SVSMK",
+      "name" : "Lil Jon",
+      "type" : "artist",
+      "uri" : "spotify:artist:7sfl4Xt5KmfyDs2T3SVSMK"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3P4VNQLuN1qQQnL8rMaIkL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3P4VNQLuN1qQQnL8rMaIkL",
+      "id" : "3P4VNQLuN1qQQnL8rMaIkL",
+      "name" : "Noriega",
+      "type" : "artist",
+      "uri" : "spotify:artist:3P4VNQLuN1qQQnL8rMaIkL"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 282706,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "ITF250500068"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/69gRFGOWY9OMpFJgFol1u0"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/69gRFGOWY9OMpFJgFol1u0",
+    "id" : "69gRFGOWY9OMpFJgFol1u0",
+    "name" : "Gasolina - DJ Buddah Remix",
+    "popularity" : 71,
+    "preview_url" : "https://p.scdn.co/mp3-preview/4bdac87857d69b1fec0a174b13e3b9a51cade0a4",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:69gRFGOWY9OMpFJgFol1u0"
+  }, {
+    "album" : {
+      "album_type" : "single",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/0PSOmcGH4zV3474SD3lals"
+      },
+      "href" : "https://api.spotify.com/v1/albums/0PSOmcGH4zV3474SD3lals",
+      "id" : "0PSOmcGH4zV3474SD3lals",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/27963e026870d759d0b101caef84e0024b1978cf",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/37c81ff8d4dfd8bd621fa5cffdb245bf1000af1a",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/6b960d8dd151cc81caaee996d2b3d6b28766fd25",
+        "width" : 64
+      } ],
+      "name" : "Piensas (Dile la Verdad) [Remix]",
+      "type" : "album",
+      "uri" : "spotify:album:0PSOmcGH4zV3474SD3lals"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5EvFsr3kj42KNv97ZEnqij"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5EvFsr3kj42KNv97ZEnqij",
+      "id" : "5EvFsr3kj42KNv97ZEnqij",
+      "name" : "Shaggy",
+      "type" : "artist",
+      "uri" : "spotify:artist:5EvFsr3kj42KNv97ZEnqij"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/2cy1zPcrFcXAJTP0APWewL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/2cy1zPcrFcXAJTP0APWewL",
+      "id" : "2cy1zPcrFcXAJTP0APWewL",
+      "name" : "Gente De Zona",
+      "type" : "artist",
+      "uri" : "spotify:artist:2cy1zPcrFcXAJTP0APWewL"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 227663,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USNPW1500203"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7mD2YYc3vHPqiixRuAmhN6"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7mD2YYc3vHPqiixRuAmhN6",
+    "id" : "7mD2YYc3vHPqiixRuAmhN6",
+    "name" : "Piensas (Dile la Verdad) - Remix",
+    "popularity" : 71,
+    "preview_url" : "https://p.scdn.co/mp3-preview/ac8bdb8060fa30af9014873c96041104b436bd55",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:7mD2YYc3vHPqiixRuAmhN6"
+  }, {
+    "album" : {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4rG0MhkU6UojACJxkMHIXB"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4rG0MhkU6UojACJxkMHIXB",
+      "id" : "4rG0MhkU6UojACJxkMHIXB",
+      "images" : [ {
+        "height" : 636,
+        "url" : "https://i.scdn.co/image/1dcac421f3ddb49cb12a007929bbc4733d5c3b96",
+        "width" : 640
+      }, {
+        "height" : 298,
+        "url" : "https://i.scdn.co/image/af821d65c1a0a08488ac480247f0b6a77f13f96f",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/0feadca0eaa45ca2de6662c20b2344b8e6cd65b5",
+        "width" : 64
+      } ],
+      "name" : "Planet Pit (Deluxe Version)",
+      "type" : "album",
+      "uri" : "spotify:album:4rG0MhkU6UojACJxkMHIXB"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/7bXgB6jMjp9ATFy66eO08Z"
+      },
+      "href" : "https://api.spotify.com/v1/artists/7bXgB6jMjp9ATFy66eO08Z",
+      "id" : "7bXgB6jMjp9ATFy66eO08Z",
+      "name" : "Chris Brown",
+      "type" : "artist",
+      "uri" : "spotify:artist:7bXgB6jMjp9ATFy66eO08Z"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 227280,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USJAY1100015"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/62zFEHfAYl5kdHYOivj4BC"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/62zFEHfAYl5kdHYOivj4BC",
+    "id" : "62zFEHfAYl5kdHYOivj4BC",
+    "name" : "International Love",
+    "popularity" : 68,
+    "preview_url" : "https://p.scdn.co/mp3-preview/683a5ca074df5da5aa6b857ef1005f77fb0716f8",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:62zFEHfAYl5kdHYOivj4BC"
+  }, {
+    "album" : {
+      "album_type" : "album",
+      "available_markets" : [ "AD", "AR", "AT", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/00zN65JStpVnpJn9ckMsQI"
+      },
+      "href" : "https://api.spotify.com/v1/albums/00zN65JStpVnpJn9ckMsQI",
+      "id" : "00zN65JStpVnpJn9ckMsQI",
+      "images" : [ {
+        "height" : 636,
+        "url" : "https://i.scdn.co/image/5f0cd403ceabdcbcec35e002c16e7e4c7eb8212e",
+        "width" : 640
+      }, {
+        "height" : 298,
+        "url" : "https://i.scdn.co/image/20ebc99d192e282c22df4c2c9a55b00cb8301a19",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/efb37a30bb67883354576218552412ce4e0a47e3",
+        "width" : 64
+      } ],
+      "name" : "Pitbull Starring In Rebelution",
+      "type" : "album",
+      "uri" : "spotify:album:00zN65JStpVnpJn9ckMsQI"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+      "id" : "0TnOYISbd1XYRBk9myaseg",
+      "name" : "Pitbull",
+      "type" : "artist",
+      "uri" : "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+    } ],
+    "available_markets" : [ "AD", "AR", "AT", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "disc_number" : 1,
+    "duration_ms" : 237120,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USJAY0900144"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5RzFJd6W40SDTyZkX6xx45"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5RzFJd6W40SDTyZkX6xx45",
+    "id" : "5RzFJd6W40SDTyZkX6xx45",
+    "name" : "I Know You Want Me (Calle Ocho)",
+    "popularity" : 68,
+    "preview_url" : "https://p.scdn.co/mp3-preview/6f403695269d85830ce4e3aaa9004331595c2269",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:5RzFJd6W40SDTyZkX6xx45"
+  } ]
+}

@@ -1,0 +1,16 @@
+#%RAML 1.0 AnnotationType
+name: pagedObject
+allowedTargets: DataElement
+displayName: Paged Object
+parameters:
+  value:
+    enum:
+        - TrackSimple
+        - PlaylistSimple
+        - AlbumSimple
+        - Album
+        - Artist
+        - Category
+        - SavedTrack
+        - Cursor
+    required: true

@@ -1,0 +1,18 @@
+#%RAML 1.0 Trait
+queryParameters:
+  limit:
+    displayName: Limit
+    description: The maximum number of items to return
+    type: integer
+    example: 10
+    minimum: 0
+    default: 20
+    maximum: 50
+    required: false
+  offset:
+    displayName: Offset
+    description: The index of the first item to return
+    type: integer
+    example: 5
+    default: 0
+    required: false

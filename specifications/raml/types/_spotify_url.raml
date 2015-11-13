@@ -1,0 +1,9 @@
+#%RAML 1.0 DataType
+displayName: Spotify URL
+type: string
+pattern: ^htt[p|ps]://open.spotify.com/(track|user|album|artist)/([a-zA-Z0-9]+)
+description: |
+  An HTML link that opens a track, album, app, playlist or other Spotify
+  resource in a Spotify client (which client is determined by the user's
+  device and account settings at play.spotify.com).
+example: http://open.spotify.com/track/6rqhFgbbKwnb9MLmUQDhG6

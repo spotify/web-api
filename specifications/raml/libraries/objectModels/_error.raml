@@ -1,0 +1,13 @@
+#%RAML 1.0 DataType
+type: object
+displayName: Error Object
+properties:
+  status:
+    type: integer
+    description: |
+      The HTTP status code (also returned in the response header; see
+      [Response Status Codes](https://developer.spotify.com/web-api/user-
+      guide/#response-status-codes) for more information).
+  message:
+    type: string
+    description: A short description of the cause of the error.

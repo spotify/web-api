@@ -1,0 +1,489 @@
+{
+  "href" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/albums?offset=0&limit=20&album_type=single,album&market=ES",
+  "items" : [ {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "BE", "BG", "CY", "CZ", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "HU", "IE", "IS", "IT", "LT", "LU", "LV", "MC", "MT", "NL", "NO", "PL", "PT", "RO", "SE", "SI", "SK", "TR" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/67PTz2RQnuh6fRf1JgxUI7"
+    },
+    "href" : "https://api.spotify.com/v1/albums/67PTz2RQnuh6fRf1JgxUI7",
+    "id" : "67PTz2RQnuh6fRf1JgxUI7",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/cc6c9be0e7d92b6779e1ac1346fcd40bf90102ca",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/1204a4b52bede0594311d5f48ee9b6f6546df7de",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/22e7aab55c81274bbcc1eb03df0bbbfe40891c75",
+      "width" : 64
+    } ],
+    "name" : "Dale",
+    "type" : "album",
+    "uri" : "spotify:album:67PTz2RQnuh6fRf1JgxUI7"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/1KugyPdDes7ppC7SUcT4gS"
+    },
+    "href" : "https://api.spotify.com/v1/albums/1KugyPdDes7ppC7SUcT4gS",
+    "id" : "1KugyPdDes7ppC7SUcT4gS",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/e8a34a8c0bb8e16c63fb0ac784639aebda667d65",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/4677d22cde0a938f500381a8c40ae7769d3685ef",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/3027622a40980ab0466fed9e509e4574b6a30460",
+      "width" : 64
+    } ],
+    "name" : "Fun (Remixes)",
+    "type" : "album",
+    "uri" : "spotify:album:1KugyPdDes7ppC7SUcT4gS"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4EUf4YyNjuXypWY6W5wEDm"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4EUf4YyNjuXypWY6W5wEDm",
+    "id" : "4EUf4YyNjuXypWY6W5wEDm",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/835884befb1b595476e590e656f27b3ec028308b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/b3074557f3c45bb3a2c9884ecbfeb692f3c51be4",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/6dc754ec4bc27563dc707fb2178a55c71b7352c9",
+      "width" : 64
+    } ],
+    "name" : "Globalization",
+    "type" : "album",
+    "uri" : "spotify:album:4EUf4YyNjuXypWY6W5wEDm"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AT", "BE", "BG", "CH", "CY", "CZ", "DE", "EE", "ES", "FI", "FR", "GB", "GR", "HU", "IE", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "NL", "NO", "PL", "PT", "RO", "SE", "SI", "SK", "TR" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4aawyAB9vmqN3uQ7FjRGTy"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4aawyAB9vmqN3uQ7FjRGTy",
+    "id" : "4aawyAB9vmqN3uQ7FjRGTy",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/9b535d1040f9512ba0c6554938251c01d5ddfbfc",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/0cf4a8587a811d7e1e5b52aeec4735552a1cf3c7",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/125521548f6a4bf771611c3cb42e00ab1dd753a4",
+      "width" : 64
+    } ],
+    "name" : "Global Warming",
+    "type" : "album",
+    "uri" : "spotify:album:4aawyAB9vmqN3uQ7FjRGTy"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4brEzXAZB8SWqgQIOBn7nF"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4brEzXAZB8SWqgQIOBn7nF",
+    "id" : "4brEzXAZB8SWqgQIOBn7nF",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/63f66228ccd63d047788d903f4b4e955ab92dcb4",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/9796552d6abe30ddcd24eb79f590abe2d1e694dd",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/8d7087dc0de61f4648af061ac056f6eec2eeacbd",
+      "width" : 64
+    } ],
+    "name" : "I Am Armando (Armando Reloaded)",
+    "type" : "album",
+    "uri" : "spotify:album:4brEzXAZB8SWqgQIOBn7nF"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4rG0MhkU6UojACJxkMHIXB"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4rG0MhkU6UojACJxkMHIXB",
+    "id" : "4rG0MhkU6UojACJxkMHIXB",
+    "images" : [ {
+      "height" : 636,
+      "url" : "https://i.scdn.co/image/1dcac421f3ddb49cb12a007929bbc4733d5c3b96",
+      "width" : 640
+    }, {
+      "height" : 298,
+      "url" : "https://i.scdn.co/image/af821d65c1a0a08488ac480247f0b6a77f13f96f",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/0feadca0eaa45ca2de6662c20b2344b8e6cd65b5",
+      "width" : 64
+    } ],
+    "name" : "Planet Pit (Deluxe Version)",
+    "type" : "album",
+    "uri" : "spotify:album:4rG0MhkU6UojACJxkMHIXB"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6gDS2GqnfUDKDls11aNDDy"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6gDS2GqnfUDKDls11aNDDy",
+    "id" : "6gDS2GqnfUDKDls11aNDDy",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/accd43be4527c28b3d13a278b985d669d9455252",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/10e785f17cd3e1a611047560c31ef5e1f3844d27",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/f3c13bd514fbdb533917b0333be113ad315e0284",
+      "width" : 64
+    } ],
+    "name" : "Armando",
+    "type" : "album",
+    "uri" : "spotify:album:6gDS2GqnfUDKDls11aNDDy"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AU", "BE", "BG", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5xLAcbvbSAlRtPXnKkggXA"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5xLAcbvbSAlRtPXnKkggXA",
+    "id" : "5xLAcbvbSAlRtPXnKkggXA",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/c3eac3303c9ab42aa258b9cbc75a53c86346db92",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/a83d395fd6dfcf2e1b473a015f86f35c83184fab",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ee283991089316271d89b146e7265814d20aff9f",
+      "width" : 64
+    } ],
+    "name" : "Pitbull Starring In Rebelution",
+    "type" : "album",
+    "uri" : "spotify:album:5xLAcbvbSAlRtPXnKkggXA"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/00zN65JStpVnpJn9ckMsQI"
+    },
+    "href" : "https://api.spotify.com/v1/albums/00zN65JStpVnpJn9ckMsQI",
+    "id" : "00zN65JStpVnpJn9ckMsQI",
+    "images" : [ {
+      "height" : 636,
+      "url" : "https://i.scdn.co/image/5f0cd403ceabdcbcec35e002c16e7e4c7eb8212e",
+      "width" : 640
+    }, {
+      "height" : 298,
+      "url" : "https://i.scdn.co/image/20ebc99d192e282c22df4c2c9a55b00cb8301a19",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/efb37a30bb67883354576218552412ce4e0a47e3",
+      "width" : 64
+    } ],
+    "name" : "Pitbull Starring In Rebelution",
+    "type" : "album",
+    "uri" : "spotify:album:00zN65JStpVnpJn9ckMsQI"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AR", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "EC", "EE", "ES", "FI", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MT", "MX", "MY", "NI", "NL", "NO", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4RaAjieYFIZRF8uh6GY43r"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4RaAjieYFIZRF8uh6GY43r",
+    "id" : "4RaAjieYFIZRF8uh6GY43r",
+    "images" : [ {
+      "height" : 636,
+      "url" : "https://i.scdn.co/image/c9e637620d655314746c7479fa7f57f4437cd44b",
+      "width" : 640
+    }, {
+      "height" : 298,
+      "url" : "https://i.scdn.co/image/79069eb79f9928d78de1fcc533bc57a8a9cc6a6f",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/45deeb6dbfbe4392ae787b1abeb7677b63a05515",
+      "width" : 64
+    } ],
+    "name" : "Pitbull Starring In Rebelution",
+    "type" : "album",
+    "uri" : "spotify:album:4RaAjieYFIZRF8uh6GY43r"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "ES" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5jxnfUbv9wfPtaewrQzcAJ"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5jxnfUbv9wfPtaewrQzcAJ",
+    "id" : "5jxnfUbv9wfPtaewrQzcAJ",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/4ecd3aba1327c69f150c6e15c05ed73010fc70b0",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/0aa085697241dbbde2003f7cf6ae93c999c62e66",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/f22a7caea3a3d5f6e1e0049b23158a4a6e305504",
+      "width" : 64
+    } ],
+    "name" : "The Boatlift",
+    "type" : "album",
+    "uri" : "spotify:album:5jxnfUbv9wfPtaewrQzcAJ"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7m9AYxqeFPagkaqlg6WE0J"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7m9AYxqeFPagkaqlg6WE0J",
+    "id" : "7m9AYxqeFPagkaqlg6WE0J",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/187a47a2d653ae440f2b2ed2eaebe7a6c7fb68a1",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/bc9839b1a7b55e5a6f88a9cd5cb919c486a875b9",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/02f3edf5596596cfb54060e7b51b6e7f2f6df245",
+      "width" : 64
+    } ],
+    "name" : "The Boatlift",
+    "type" : "album",
+    "uri" : "spotify:album:7m9AYxqeFPagkaqlg6WE0J"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6ODOJvYpaQ3p0O6Agrlt4B"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6ODOJvYpaQ3p0O6Agrlt4B",
+    "id" : "6ODOJvYpaQ3p0O6Agrlt4B",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/6ea3a0cd13b2ffe195438bad631520336e1d5bf0",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/512a03ec495914ffece9308a2ab00725ebbc3e4c",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/b91ab861737a3df7e82c729a95fab4c87f14ed9e",
+      "width" : 64
+    } ],
+    "name" : "The Boatlift - Clean",
+    "type" : "album",
+    "uri" : "spotify:album:6ODOJvYpaQ3p0O6Agrlt4B"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7rOcmdW8dWxlScy6AUgjI8"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7rOcmdW8dWxlScy6AUgjI8",
+    "id" : "7rOcmdW8dWxlScy6AUgjI8",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/0bb2884bb6f6c43d5dd673d45953e44e9ba0ea2b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/3a6270b79646edb93dcacde708edc1384a15649e",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/257a22406fc419db4d9cd74dafd5d4b78b72dac4",
+      "width" : 64
+    } ],
+    "name" : "El Mariel",
+    "type" : "album",
+    "uri" : "spotify:album:7rOcmdW8dWxlScy6AUgjI8"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/69bXbGpsjbLtygqiiaXIqf"
+    },
+    "href" : "https://api.spotify.com/v1/albums/69bXbGpsjbLtygqiiaXIqf",
+    "id" : "69bXbGpsjbLtygqiiaXIqf",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/246e2b3a13e0afbc1a584f1c20823ecb62eb6147",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/3f1db416221ef6f756ac9f965a1f44a21ff7bf8b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/2cca314e6095faa5a066672a2333e91dd88842b9",
+      "width" : 64
+    } ],
+    "name" : "El Mariel - Clean",
+    "type" : "album",
+    "uri" : "spotify:album:69bXbGpsjbLtygqiiaXIqf"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0gayfOCt1DJX4j8MOhv7we"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0gayfOCt1DJX4j8MOhv7we",
+    "id" : "0gayfOCt1DJX4j8MOhv7we",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/3179718f5a57fc52bc414f7d4f8c726984a0de4b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/5c7b1db0f64e02114bc6008a530853df35d831c7",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/dbf9466d753b4f425396651a8eb75ddf0225a6b9",
+      "width" : 64
+    } ],
+    "name" : "Money Is Still A Major Issue",
+    "type" : "album",
+    "uri" : "spotify:album:0gayfOCt1DJX4j8MOhv7we"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4y8v2mnHITUR0Vi2HSAh4F"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4y8v2mnHITUR0Vi2HSAh4F",
+    "id" : "4y8v2mnHITUR0Vi2HSAh4F",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/3179718f5a57fc52bc414f7d4f8c726984a0de4b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/5c7b1db0f64e02114bc6008a530853df35d831c7",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/dbf9466d753b4f425396651a8eb75ddf0225a6b9",
+      "width" : 64
+    } ],
+    "name" : "Money Is Still A Major Issue",
+    "type" : "album",
+    "uri" : "spotify:album:4y8v2mnHITUR0Vi2HSAh4F"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4XjhmH3OAt8kDHAMNS2eUY"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4XjhmH3OAt8kDHAMNS2eUY",
+    "id" : "4XjhmH3OAt8kDHAMNS2eUY",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/3179718f5a57fc52bc414f7d4f8c726984a0de4b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/5c7b1db0f64e02114bc6008a530853df35d831c7",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/dbf9466d753b4f425396651a8eb75ddf0225a6b9",
+      "width" : 64
+    } ],
+    "name" : "Money Is Still A Major Issue - Clean",
+    "type" : "album",
+    "uri" : "spotify:album:4XjhmH3OAt8kDHAMNS2eUY"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/76N6imyjQ9h5p2NzakHT32"
+    },
+    "href" : "https://api.spotify.com/v1/albums/76N6imyjQ9h5p2NzakHT32",
+    "id" : "76N6imyjQ9h5p2NzakHT32",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/963ccc301158d51d999ea3f0f7f8cf1232606236",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/887c20ba4508d968272ae371a5a10c52352e666c",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/a2a5886a18396fe4c025b1de74be66177773d51b",
+      "width" : 64
+    } ],
+    "name" : "M.I.A.M.I.",
+    "type" : "album",
+    "uri" : "spotify:album:76N6imyjQ9h5p2NzakHT32"
+  }, {
+    "album_type" : "album",
+    "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "RO", "SE", "SG", "SI", "SK", "SV", "TR", "TW", "US", "UY" ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0IASxKSVqVrTbaSZkHWCo9"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0IASxKSVqVrTbaSZkHWCo9",
+    "id" : "0IASxKSVqVrTbaSZkHWCo9",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/259820f24456dd58c1f5819bb42645834499d898",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/73f5937db0d55b86db0014cd2b72ea95e441cad8",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/70615edb5a7382d4a6ce93ecc1d1b80e8f1a1bdb",
+      "width" : 64
+    } ],
+    "name" : "M.I.A.M.I. - Clean",
+    "type" : "album",
+    "uri" : "spotify:album:0IASxKSVqVrTbaSZkHWCo9"
+  } ],
+  "limit" : 20,
+  "next" : "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/albums?offset=20&limit=20&album_type=single,album&market=ES",
+  "offset" : 0,
+  "previous" : null,
+  "total" : 75
+}

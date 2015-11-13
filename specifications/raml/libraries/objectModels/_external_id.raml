@@ -1,0 +1,13 @@
+#%RAML 1.0 DataType
+type: object
+displayName: External ID
+description: Known external IDs for object
+properties:
+  [isrc|ean|upc]:
+    type: string
+    description: |
+      The identifier type:
+        "isrc" - International Standard Recording Code
+        "ean" - International Article Number
+        "upc" - Universal Product Code
+

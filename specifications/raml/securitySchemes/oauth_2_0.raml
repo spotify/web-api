@@ -1,0 +1,38 @@
+#%RAML 1.0
+description: |
+    Spotify supports OAuth 2.0 for authenticating all API requests.
+type: OAuth 2.0
+describedBy:
+  headers:
+    Authorization:
+      description: |
+        Used to send a valid OAuth 2 access token.
+      type: string
+  responses:
+    401:
+      description: |
+        Bad or expired token. This can happen if the user revoked a token or
+        the access token has expired. You should re-authenticate the user.
+    403:
+      description: |
+        Bad OAuth request (access token without necessary scope).
+settings:
+  authorizationUri: https://accounts.spotify.com/authorize
+  accessTokenUri: https://accounts.spotify.com/api/token
+  authorizationGrants:
+    - authorization_code
+    - refresh_token
+    - client_credentials
+    - implicit
+  scopes:
+    - user-library-read
+    - user-library-modify
+    - user-read-private
+    - user-read-birthdate
+    - user-read-email
+    - user-follow-read
+    - user-follow-modify
+    - playlist-read-collaborative
+    - playlist-read-private
+    - playlist-modify-public
+    - playlist-modify-private

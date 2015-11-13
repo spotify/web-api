@@ -1,0 +1,20 @@
+#%RAML 1.0 DataType
+type: ArtistSimple
+displayName: Full Artist Object
+properties:
+  followers: Followers
+  genres:
+    type: string[]
+    description: |
+      A list of the genres the artist is associated with. If not yet
+      classified, the array is empty.
+    example: ["Prog Rock", "Post-Grunge"]
+  images: Image[]
+  popularity:
+    type: integer
+    description: |
+      The popularity of the artist. The value will be between 0 and 100, with
+      100 being the most popular. The artist's popularity is calculated from
+      the popularity of all the artist's tracks.
+    minimum: 0
+    maximum: 100

@@ -1,0 +1,59 @@
+#%RAML 1.0 DataType
+type: object
+displayName: Simple Track Object
+properties:
+  artists: ArtistSimple[]
+  available_markets:
+    type: string[]
+    description: |
+      A list of the countries in which the track can be played, identified by
+      their [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+      code.
+  disc_number:
+    type: integer
+    description: |
+      The disc number (usually `1` unless the album consists of more than
+      one disc).
+  duration_ms:
+    type: integer
+    description: The track length in milliseconds.
+  explicit:
+    type: boolean
+    description: |
+      Whether or not the track has explicit lyrics (`true` = yes it does;
+      `false` = no it does not OR unknown).
+  external_urls: ExternalUrl
+  href:
+    type: string
+    description: |
+      A link to the Web API endpoint providing full details of the track.
+  id: SpotifyId
+  is_playable:
+    type: boolean
+    description: |
+      Part of the response when [Track Relinking](https://developer.spotify.
+      com/web-api/track-relinking-guide/) is applied. If `true`, the track is
+      playable in the given market. Otherwise `false`.
+  linked_from:
+    type: TrackLink
+    description: |
+      Part of the response when [Track Relinking](https://developer.spotify.
+      com/web-api/track-relinking-guide/) is applied and is only part of the
+      response if the track linking, in fact, exists. The requested track
+      has been replaced with a different track. The track in the `linked_from`
+      object contains information about the originally requested track.
+  name:
+    type: string
+    description: The name of the track.
+  preview_url:
+    type: string
+    description: A URL to a 30 second preview (MP3 format) of the track.
+  track_number:
+    type: integer
+    description: |
+      The number of the track. If an album has several discs, the track
+      number is the number on the specified disc.
+  type:
+    type: string
+    description: The object type: "track".
+  uri: SpotifyUri
