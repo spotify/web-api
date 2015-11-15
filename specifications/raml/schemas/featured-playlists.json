@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "A sentence describing the context for the featured playlists."
+    },
+    "playlists": {
+      "$ref": "playlist-simple-page"
+    }
+  }
+}

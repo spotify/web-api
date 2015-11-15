@@ -722,7 +722,7 @@ traits:
       200:
         body:
           application/json:
-            schema: playlist-simple-page
+            schema: featured-playlists
 /browse/categories:
   displayName: browse-categories
   type: collection
@@ -927,6 +927,7 @@ schemas:
   - artist-simple: !include schemas/artist-simple.json
   - category: !include schemas/category.json
   - category-page: !include schemas/category-page.json
+  - featured-playlists: !include schemas/featured-playlists.json
   - image: !include schemas/image.json
   - playlist: !include schemas/playlist.json
   - playlist-simple: !include schemas/playlist-simple.json
