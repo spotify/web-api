@@ -5,6 +5,8 @@ The purpose of this repository is to work as the public issue tracker for [Spoti
 
 [Open bug tickets](https://github.com/spotify/web-api/labels/bug) | [Open feature requests](https://github.com/spotify/web-api/labels/enhancement) | [All](https://github.com/spotify/web-api/issues) 
 
+**If you want to show your support for an existing feature request, please add a [thumbs up reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments) instead of commenting  "_+1_".** This way the creator of the feature request doesn't get spammed by Github.
+
 For bugs and features related to the mobile SDKs, please visit the repositories for the [Android SDK](https://github.com/spotify/android-sdk/) or the [iOS SDK](https://github.com/spotify/ios-sdk/).
 
 If you have ideas, bug reports, or any other type of feedback to Spotify that doesn't relate to the Web API, please submit these at [Spotify's Community forums](https://community.spotify.com/).
