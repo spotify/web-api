@@ -7,21 +7,21 @@ documentation:
   - title: Spotify Web API Docs
     content: |
       Welcome to the _Spotify Web API_ specification. For more information about
-      how to use the API, check out the [Spotify's developer site](https://developer.spotify.com/web-api/).
+      how to use the API, check out [Spotify's developer site](https://developer.spotify.com/web-api/).
+schemas:
+  - Playlist: !include schemas/playlist.json
 resourceTypes:
   - base:
       get?: &common
         headers:
           Accept:
-            description: It is used to set specified media type.
+            description: Is used to set specified media type.
             type: string
         responses:
           429:
             description: |
               API rate limit exceeded. See http://developer.spotify.com/web-api/user-guide/#rate-limiting for details.
       post?: *common
-      put?: *common
-      delete?: *common
   - item:
       type: base
       get?:
@@ -46,12 +46,17 @@ securitySchemes:
               the access token has expired. You should re-authenticate the user.
           403:
             description: |
-              Bad OAuth request (access token without necessary scope).
+              Bad OAuth request (wrong consumer key, bad nonce, expired
+              timestamp...). Unfortunately, re-authenticating the user won't help here.
       settings:
         authorizationUri: https://accounts.spotify.com/authorize
         accessTokenUri: https://accounts.spotify.com/api/token
         authorizationGrants: [ code, token ]
         scopes:
+          - "playlist-read-private"
+          - "playlist-read-collaborative"
+          - "playlist-modify-public"
+          - "playlist-modify-private"
           - "user-library-read"
           - "user-library-modify"
           - "user-read-private"
@@ -59,10 +64,7 @@ securitySchemes:
           - "user-read-email"
           - "user-follow-read"
           - "user-follow-modify"
-          - "playlist-read-collaborative"
-          - "playlist-read-private"
-          - "playlist-modify-public"
-          - "playlist-modify-private"
+          - "user-top-read"
 traits:
   - filterable:
       queryParameters:
@@ -75,7 +77,7 @@ traits:
       queryParameters:
         limit:
           displayName: Limit
-          description: The maximum number of items to return
+          description: The maximum number of track objects to return
           type: integer
           example: 10
           minimum: 0
@@ -84,7 +86,7 @@ traits:
           required: false
         offset:
           displayName: Offset
-          description: The index of the first item to return
+          description: The index of the first track to return
           type: integer
           example: 5
           default: 0
@@ -94,6 +96,7 @@ traits:
   get:
     description: |
       [Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)
+    securedBy: [ null, oauth_2_0: { scopes: []}]
     queryParameters:
       ids:
         displayName: Spotify Album IDs
@@ -107,23 +110,6 @@ traits:
         type: string
         example: ES
         required: false
-    responses:
-      200:
-        body:
-          application/json:
-            schema: |
-              {
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "type": "object",
-                "properties" : {
-                  "albums" : {
-                    "type": "array",
-                    "items": {
-                       "$ref": "album"
-                    }
-                  }
-                }
-              }
   /{id}:
     displayName: album
     uriParameters:
@@ -135,6 +121,7 @@ traits:
     get:
       description: |
         [Get an Album](https://developer.spotify.com/web-api/get-album/)
+      securedBy: [ null, oauth_2_0: { scopes: []}]
       queryParameters:
         market:
           displayName: Market
@@ -142,17 +129,13 @@ traits:
           type: string
           example: ES
           required: false
-      responses:
-        200:
-          body:
-            application/json:
-              schema: album
     /tracks:
       displayName: album-tracks
       get:
         is: [ paged ]
         description: |
           [Get an Album's Tracks](https://developer.spotify.com/web-api/get-albums-tracks/)
+        securedBy: [ null, oauth_2_0: { scopes: []}]
         queryParameters:
           market:
             displayName: Market
@@ -160,40 +143,19 @@ traits:
             type: string
             example: ES
             required: false
-        responses:
-          200:
-            body:
-              application/json:
-                schema: album-track-page
 /artists:
   displayName: several-artists
   get:
     description: |
       [Get Several Artists](https://developer.spotify.com/web-api/get-several-artists/)
+    securedBy: [ null, oauth_2_0: { scopes: []}]
     queryParameters:
       ids:
         displayName: Spotify Artist IDs
         type: string
         description: A comma-separated list of IDs
         required: true
-        example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
-    responses:
-      200:
-        body:
-          application/json:
-            schema: |
-              {
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "type": "object",
-                "properties" : {
-                  "artists" : {
-                    "type": "array",
-                    "items": {
-                       "$ref": "artist"
-                    }
-                  }
-                }
-              }
+        example: '2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6'
   /{id}:
     displayName: artist
     uriParameters:
@@ -206,16 +168,13 @@ traits:
     get:
       description: |
         [Get an Artist](https://developer.spotify.com/web-api/get-artist/)
-      responses:
-        200:
-          body:
-            application/json:
-              schema: artist
+      securedBy: [ null, oauth_2_0: { scopes: []}]
     /top-tracks:
       displayName: artist-top-tracks
       get:
         description: |
           [Get an Artist's Top Tracks](https://developer.spotify.com/web-api/get-artists-top-tracks/)
+        securedBy: [ null, oauth_2_0: { scopes: []}]
         queryParameters:
           country:
             displayName: Country
@@ -223,47 +182,19 @@ traits:
             type: string
             example: ES
             required: true
-        responses:
-          200:
-            body:
-              application/json:
-                schema: |
-                  {
-                    "$schema": "http://json-schema.org/draft-03/schema",
-                    "type": "object",
-                    "properties": {
-                      "tracks": {
-                        "type": "array",
-                        "items": {"$ref": "track"}
-                      }
-                    }
-                  }
     /related-artists:
       displayName: artist-related-artists
       get:
         description: |
           [Get an Artist's Related Artists](https://developer.spotify.com/web-api/get-related-artists/)
-        responses:
-          200:
-            body:
-              application/json:
-                schema: |
-                  {
-                    "$schema": "http://json-schema.org/draft-03/schema",
-                    "type": "object",
-                    "properties": {
-                      "artists": {
-                        "type": "array",
-                        "items": {"$ref": "artist"}
-                      }
-                    }
-                  }
+        securedBy: [ null, oauth_2_0: { scopes: []}]
     /albums:
       displayName: artist-albums
       get:
         is: [ paged ]
         description: |
           [Get an Artist's Albums](https://developer.spotify.com/web-api/get-artists-albums/)
+        securedBy: [ null, oauth_2_0: { scopes: []}]
         queryParameters:
           album_type:
             displayName: Album Type (single, album, appears_on, compilation)
@@ -277,46 +208,25 @@ traits:
             type: string
             example: ES
             required: false
-        responses:
-          200:
-            body:
-              application/json:
-                schema: album-simple-page
 /tracks:
   displayName: several-tracks
   get:
     description: |
       [Get Several Tracks](https://developer.spotify.com/web-api/get-several-tracks/)
+    securedBy: [ null, oauth_2_0: { scopes: []}]
     queryParameters:
       ids:
         displayName: Spotify Track IDs
         type: string
         description: A comma-separated list of IDs
         required: true
-        example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+        example: '7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B'
       market:
         displayName: Market
         description: The market (an ISO 3166-1 alpha-2 country code)
         type: string
         example: ES
         required: false
-    responses:
-      200:
-        body:
-          application/json:
-            schema: |
-              {
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "type": "object",
-                "properties" : {
-                  "tracks" : {
-                    "type": "array",
-                    "items": {
-                       "$ref": "track"
-                    }
-                  }
-                }
-              }
   /{id}:
     displayName: track
     uriParameters:
@@ -327,6 +237,7 @@ traits:
     get:
       description: |
         [Get a Track](https://developer.spotify.com/web-api/get-track/)
+      securedBy: [ null, oauth_2_0: { scopes: []}]
       queryParameters:
         market:
           displayName: Market
@@ -334,17 +245,13 @@ traits:
           type: string
           example: ES
           required: false
-      responses:
-        200:
-          body:
-            application/json:
-              schema: track
 /search:
   displayName: search-item
   get:
     is: [ paged ]
     description: |
       [Search for an Item](https://developer.spotify.com/web-api/search-item/)
+    securedBy: [ null, oauth_2_0: { scopes: []}]
     queryParameters:
       q:
         displayName: Query
@@ -362,23 +269,76 @@ traits:
         displayName: Market
         type: string
         description: The market (an ISO 3166-1 alpha-2 country code).  If given, only items with content playable in that market will be returned.
-        example: US
-    responses:
-      200:
-        body:
-          application/json:
-            schema: search
+        example: 'US'
 /me:
   displayName: current-user
-  securedBy: [ oauth_2_0: {scopes: ["user-read-private", "user-read-birthdate", "user-read-email"]} ]
+  securedBy: [ oauth_2_0: {scopes: ['user-read-private', 'user-read-birthdate', 'user-read-email']} ]
   get:
     description: |
       [Get Current User's Profile](https://developer.spotify.com/web-api/get-current-users-profile/)
-    responses:
-      200:
-        body:
-          application/json:
-            schema: current-user-profile
+  /playlists:
+    displayName: current-user-playlists
+    type: collection
+    get:
+      is: [ paged ]
+      description: |
+        [Get a List of Current User's Playlists](https://developer.spotify.com/web-api/get-a-list-of-current-users-playlists/)
+      securedBy: [ oauth_2_0: {scopes: ['playlist-read-private']}]
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-03/schema",
+                  "type": "array",
+                  "items": {
+                    "$ref": "schemas/playlist.json"
+                  }
+                }
+  /albums:
+    displayName: current-user-saved-albums
+    type: collection
+    get:
+      is: [ paged ]
+      description: |
+        [Get Current User's Saved Albums](https://developer.spotify.com/web-api/get-users-saved-albums/)
+      securedBy: [ oauth_2_0: {scopes: ['user-library-read']}]
+    put:
+      description: |
+        [Save Albums for Current User](https://developer.spotify.com/web-api/save-albums-user/)
+      securedBy: [ oauth_2_0: {scopes: ['user-library-modify']}]
+      queryParameters:
+        ids:
+          displayName: Spotify Album IDs
+          type: string
+          description: A comma-separated list of IDs
+          required: true
+          example: '07bYtmE3bPsLB6ZbmmFi8d,48JYNjh7GMie6NjqYHMmtT,27cZdqrQiKt3IT00338dws'
+    delete:
+      description: |
+        [Remove Albums for Current User](https://developer.spotify.com/web-api/remove-albums-user/)
+      securedBy: [ oauth_2_0: {scopes: ['user-library-modify']}]
+      queryParameters:
+        ids:
+          displayName: Spotify Album IDs
+          type: string
+          description: A comma-separated list of IDs
+          required: true
+          example: '07bYtmE3bPsLB6ZbmmFi8d,48JYNjh7GMie6NjqYHMmtT,27cZdqrQiKt3IT00338dws'
+    /contains:
+      displayName: current-user-contains-saved-albums
+      get:
+        description: |
+          [Check Current User's Saved Albums](https://developer.spotify.com/web-api/check-users-saved-albums/)
+        securedBy: [ oauth_2_0: {scopes: ['user-library-read']}]
+        queryParameters:
+          ids:
+            displayName: Spotify Album IDs
+            type: string
+            description: A comma-separated list of IDs
+            required: true
+            example: '07bYtmE3bPsLB6ZbmmFi8d,48JYNjh7GMie6NjqYHMmtT,27cZdqrQiKt3IT00338dws'
   /tracks:
     displayName: current-user-saved-tracks
     type: collection
@@ -386,7 +346,7 @@ traits:
       is: [ paged ]
       description: |
         [Get Current User's Saved Tracks](https://developer.spotify.com/web-api/get-users-saved-tracks/)
-      securedBy: [ oauth_2_0: {scopes: ["user-library-read"]}]
+      securedBy: [ oauth_2_0: {scopes: ['user-library-read']}]
       queryParameters:
         market:
           displayName: Market
@@ -394,67 +354,61 @@ traits:
           type: string
           example: ES
           required: false
-      responses:
-        200:
-          body:
-            application/json:
-              schema: saved-track-page
     put:
       description: |
         [Save Tracks for Current User](https://developer.spotify.com/web-api/save-tracks-user/)
-      securedBy: [ oauth_2_0: {scopes: ["user-library-modify"]}]
+      securedBy: [ oauth_2_0: {scopes: ['user-library-modify']}]
       queryParameters:
         ids:
           displayName: Spotify Track IDs
           type: string
           description: A comma-separated list of IDs
           required: true
-          example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
-      responses:
-        200:
-          body:
-            text/plain:
+          example: '7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B'
     delete:
       description: |
         [Remove Tracks for Current User](https://developer.spotify.com/web-api/remove-tracks-user/)
-      securedBy: [ oauth_2_0: {scopes: ["user-library-modify"]}]
+      securedBy: [ oauth_2_0: {scopes: ['user-library-modify']}]
       queryParameters:
         ids:
           displayName: Spotify Track IDs
           type: string
           description: A comma-separated list of IDs
           required: true
-          example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
-      responses:
-        200:
-          body:
-            text/plain:
+          example: '7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B'
     /contains:
       displayName: current-user-contains-saved-tracks
       get:
         description: |
           [Check Current User's Saved Tracks](https://developer.spotify.com/web-api/check-users-saved-tracks/)
-        securedBy: [ oauth_2_0: {scopes: ["user-library-read"]}]
+        securedBy: [ oauth_2_0: {scopes: ['user-library-read']}]
         queryParameters:
           ids:
             displayName: Spotify Track IDs
             type: string
             description: A comma-separated list of IDs
             required: true
-            example: "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
-        responses:
-          200:
-            body:
-              application/json:
-                schema: |
-                  {
-                    "$schema": "http://json-schema.org/draft-03/schema",
-                    "type": "array",
-                    "items": {
-                      "type": "boolean",
-                      "description": "True if the track is in user's Your Music library, false otherwise"
-                    }
-                  }
+            example: '7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B'
+  /top/{type}:
+    displayName: current-user-top-artists-and-tracks
+    uriParameters:
+      type:
+        displayName: Type
+        type: string
+        description: The type of item.  "artists" or "tracks"
+        example: artists
+    get:
+      is: [paged]
+      description: |
+        [Get User's Top Artists and Tracks](https://developer.spotify.com/web-api/get-users-top-artists-and-tracks/)
+      securedBy: [ oauth_2_0: {scopes: ['user-top-read']}]
+      queryParameters:
+        time_range:
+          displayName: Time Range
+          type: string
+          description: Over what timeframe are the affinities computed. "long-term", "medium-term" or "short-term"
+          required: false
+          default: medium-term
 /users/{user_id}:
   displayName: users-profile
   uriParameters:
@@ -466,11 +420,7 @@ traits:
   get:
     description: |
       [Get a User's Profile](https://developer.spotify.com/web-api/get-users-profile/)
-    responses:
-      200:
-        body:
-          application/json:
-            schema: user-profile
+    securedBy: [ null, oauth_2_0: { scopes: []}]
 /users/{user_id}/playlists:
   type: collection
   uriParameters:
@@ -484,16 +434,23 @@ traits:
     is: [ paged ]
     description: |
       [Get a List of a User's Playlists](https://developer.spotify.com/web-api/get-list-users-playlists/)
-    securedBy: [ oauth_2_0: {scopes: ["playlist-read-private", "playlist-read-collaborative"]}]
+    securedBy: [ oauth_2_0: {scopes: ['playlist-read-private', 'playlist-read-collaborative']}]
     responses:
       200:
         body:
           application/json:
-            schema: playlist-simple-page
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "type": "array",
+                "items": {
+                  "$ref": "schemas/playlist.json"
+                }
+              }
   post:
     description: |
       [Create a Playlist](https://developer.spotify.com/web-api/create-playlist/)
-    securedBy: [ oauth_2_0: {scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+    securedBy: [ oauth_2_0: {scopes: ['playlist-modify-public', 'playlist-modify-private']}]
     body:
       application/json:
         schema: !include schemas/post-playlist.json
@@ -502,7 +459,7 @@ traits:
       201:
         body:
           application/json:
-            schema: playlist
+            schema: Playlist
   /{playlist_id}:
     type: item
     displayName: playlist
@@ -529,19 +486,15 @@ traits:
         200:
           body:
             application/json:
-              schema: playlist
+              schema: Playlist
     put:
       description: |
         [Change a Playlist's Details](https://developer.spotify.com/web-api/change-playlist-details/)
-      securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+      securedBy: [ oauth_2_0: { scopes: ['playlist-modify-public', 'playlist-modify-private']}]
       body:
         application/json:
           schema: !include schemas/put-playlist.json
           example: !include examples/put-playlist.json
-      responses:
-        200:
-          body:
-            text/plain:
     /tracks:
       type: collection
       displayName: playlist-tracks
@@ -557,15 +510,10 @@ traits:
             type: string
             example: ES
             required: false
-        responses:
-          200:
-            body:
-              application/json:
-                schema: playlist-track-page
       post:
         description: |
           [Add Tracks to a Playlist](https://developer.spotify.com/web-api/add-tracks-to-playlist/)
-        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        securedBy: [ oauth_2_0: { scopes: ['playlist-modify-public', 'playlist-modify-private']}]
         queryParameters:
           position:
             displayName: Position (append by default)
@@ -578,50 +526,36 @@ traits:
             description: A comma-separated list of Spotify track URIs to add. A maximum of 100 tracks can be added in one request.
             type: string
             required: true
-            example: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M"
-        responses:
-          200:
-            body:
-              application/json:
-                schema: playlist-snapshot
+            example: 'spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M'
       put:
         description: |
           [Reorder or replace a Playlist's Tracks](https://developer.spotify.com/web-api/reorder-playlists-tracks/)
-        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        securedBy: [ oauth_2_0: { scopes: ['playlist-modify-public', 'playlist-modify-private']}]
         body:
           application/json:
             schema: !include schemas/put-playlist-tracks.json
             example: !include examples/put-playlist-tracks.json
-        responses:
-          200:
-            body:
-              application/json:
-                schema: playlist-snapshot
       delete:
         description: |
           [Remove Tracks from a Playlist](https://developer.spotify.com/web-api/remove-tracks-playlist/)
-        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        securedBy: [ oauth_2_0: { scopes: ['playlist-modify-public', 'playlist-modify-private']}]
         body:
           application/json:
             schema: !include schemas/delete-playlist-tracks.json
             example: !include examples/delete-playlist-tracks.json
-        responses:
-          200:
-            body:
-              application/json:
-                schema: playlist-snapshot
     /followers:
       displayName: playlist-followers
       put:
         description: |
           [Follow a Playlist](https://developer.spotify.com/web-api/follow-playlist/)
-        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
+        securedBy: [ oauth_2_0: { scopes: ['playlist-modify-public', 'playlist-modify-private']}]
         body:
           application/json:
             schema: |
               {
-                "$schema": "http://json-schema.org/draft-03/schema",
                 "type": "object",
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "id": "http://jsonschema.net",
                 "required": false,
                 "properties": {
                   "public": {
@@ -631,18 +565,10 @@ traits:
                 }
               }
             example: !include examples/put-playlist-followers.json
-        responses:
-          200:
-            body:
-              text/plain:
       delete:
         description: |
           [Unfollow a Playlist](https://developer.spotify.com/web-api/unfollow-playlist/)
-        securedBy: [ oauth_2_0: { scopes: ["playlist-modify-public", "playlist-modify-private"]}]
-        responses:
-          200:
-            body:
-              text/plain:
+        securedBy: [ oauth_2_0: { scopes: ['playlist-modify-public', 'playlist-modify-private']}]
       /contains:
         displayName: playlist-followers-contains
         get:
@@ -655,20 +581,8 @@ traits:
               type: string
               description: A comma-separated list of users ids
               required: true
-              example: "jmperezperez,thelinmichael,wizzler"
-          responses:
-            200:
-              body:
-                application/json:
-                  schema: |
-                    {
-                      "$schema": "http://json-schema.org/draft-03/schema",
-                      "type": "array",
-                      "items": {
-                        "type": "boolean",
-                        "description": "True if the user follows the playlist, false otherwise"
-                      }
-                    }
+              example: 'jmperezperez,thelinmichael,wizzler'
+
 /browse/new-releases:
   displayName: new-releases
   type: collection
@@ -684,11 +598,6 @@ traits:
         type: string
         example: SE
         required: false
-    responses:
-      200:
-        body:
-          application/json:
-            schema: album-simple-page
 /browse/featured-playlists:
   displayName: featured-playlists
   type: collection
@@ -716,18 +625,12 @@ traits:
         description: |
           A timestamp in ISO 8601 format (yyyy-MM-dd'T'HH:mm:ss) with the user's local time to get results tailored to a specific date and time in the day. If not provided, it defaults to the current UTC time. Example: "2014-10-23T09:00:00" for a user whose local time is 9AM.
         type: string
-        example: "2014-10-23T09:00:00"
+        example: '2014-10-23T09:00:00'
         required: false
-    responses:
-      200:
-        body:
-          application/json:
-            schema: featured-playlists
 /browse/categories:
   displayName: browse-categories
   type: collection
   get:
-    is: [ paged ]
     description: |
       [Get a List of Browse Categories](https://developer.spotify.com/web-api/get-list-categories/)
     securedBy: [ oauth_2_0: {scopes: []} ]
@@ -745,11 +648,22 @@ traits:
         type: string
         example: sv_SE
         required: false
-    responses:
-      200:
-        body:
-          application/json:
-            schema: category-page
+      limit:
+        displayName: Limit
+        description: The maximum number of category objects to return
+        type: integer
+        example: 10
+        minimum: 0
+        default: 20
+        maximum: 50
+        required: false
+      offset:
+        displayName: Offset
+        description: The index of the first category to return
+        type: integer
+        example: 5
+        default: 0
+        required: false
   /{category_id}:
     displayName: browse-category
     type: item
@@ -777,16 +691,10 @@ traits:
           type: string
           example: sv_SE
           required: false
-      responses:
-        200:
-          body:
-            application/json:
-              schema: category
     /playlists:
       displayName: category-playlists
       type: collection
       get:
-        is: [ paged ]
         description: |
           [Get a Category's playlists](https://developer.spotify.com/web-api/get-categorys-playlists/)
         securedBy: [ oauth_2_0: {scopes: []} ]
@@ -797,58 +705,55 @@ traits:
             type: string
             example: SE
             required: false
-        responses:
-          200:
-            body:
-              application/json:
-                schema: |
-                  {
-                    "$schema": "http://json-schema.org/draft-03/schema",
-                    "type": "object",
-                    "properties": {
-                      "playlists": {
-                        "$ref": "playlist-simple-page"
-                      }
-                    }
-                  }
+          limit:
+            displayName: Limit
+            description: The maximum number of playlist objects to return
+            type: integer
+            example: 10
+            minimum: 0
+            default: 20
+            maximum: 50
+            required: false
+          offset:
+            displayName: Offset
+            description: The index of the first playlist to return
+            type: integer
+            example: 5
+            default: 0
+            required: false
 /me/following:
   displayName: following
   get:
     description: |
-      [Get User's Followed Artists](https://developer.spotify.com/web-api/get-followed-artists/)
-    securedBy: [ oauth_2_0: {scopes: ["user-follow-read"]} ]
+      [Get User's Followed Artists](https://developer.spotify.com/web-api/get-followed/)
+    securedBy: [ oauth_2_0: {scopes: ['user-follow-read']} ]
     queryParameters:
       type:
         displayName: Item Type
-        description: The ID type, currently only artist is supported.
+        description: The type to unfollow (only artist is supported so far).
         type: string
         example: artist
         enum: ["artist"]
         required: true
+      after:
+        displayName: After
+        description: The last artist ID retrieved from the previous request.
+        type: string
+        example: '0I2XqVXqHScXjHhk6AYYRe'
+        required: false
       limit:
         displayName: Limit
-        description: The maximum number of items to return
+        description: The maximum number of track objects to return
         type: integer
         example: 10
         minimum: 0
         default: 20
         maximum: 50
         required: false
-      after:
-        displayName: After
-        description: The last artist ID retrieved from the previous request.
-        type: string
-        example: 0aV6DOiouImYTqrR5YlIqx
-        required: false
-    responses:
-      200:
-        body:
-          application/json:
-            schema: user-followed
   put:
     description: |
       [Follow Artists or Users](https://developer.spotify.com/web-api/follow-artists-users/)
-    securedBy: [ oauth_2_0: {scopes: ["user-follow-modify"]} ]
+    securedBy: [ oauth_2_0: {scopes: ['user-follow-modify']} ]
     queryParameters:
       type:
         displayName: Item Type
@@ -862,13 +767,11 @@ traits:
         type: string
         description: A comma-separated list of the artists or users ids
         required: true
-        example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
-    responses:
-      204:
+        example: '2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6'
   delete:
     description: |
       [Unfollow Artists or Users](https://developer.spotify.com/web-api/unfollow-artists-users/)
-    securedBy: [ oauth_2_0: {scopes: ["user-follow-modify"]} ]
+    securedBy: [ oauth_2_0: {scopes: ['user-follow-modify']} ]
     queryParameters:
       type:
         displayName: Item Type
@@ -882,15 +785,13 @@ traits:
         type: string
         description: A comma-separated list of the artists or users ids
         required: true
-        example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
-    responses:
-      204:
+        example: '2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6'
   /contains:
     displayName: following-contains
     get:
       description: |
         [Check if Current User Follows Artists or Users](https://developer.spotify.com/web-api/check-current-user-follows/)
-      securedBy: [ oauth_2_0: {scopes: ["user-follow-read"]} ]
+      securedBy: [ oauth_2_0: {scopes: ['user-follow-read']} ]
       queryParameters:
         type:
           displayName: Item Type
@@ -903,45 +804,347 @@ traits:
           displayName: Spotify IDs
           description: A comma-separated string of the artists or users ids.
           type: string
-          example: "2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6"
+          example: '2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6'
           required: true
-      responses:
-        200:
-          body:
-            application/json:
-              schema: |
-                {
-                  "$schema": "http://json-schema.org/draft-03/schema",
-                  "type": "array",
-                  "items": {
-                    "type": "boolean",
-                    "description": "True if the user follows the artist/user, false otherwise"
-                  }
-                }
-schemas:
-  - album: !include schemas/album.json
-  - album-simple: !include schemas/album-simple.json
-  - album-simple-page: !include schemas/album-simple-page.json
-  - album-track-page: !include schemas/album-track-page.json
-  - artist: !include schemas/artist.json
-  - artist-simple: !include schemas/artist-simple.json
-  - category: !include schemas/category.json
-  - category-page: !include schemas/category-page.json
-  - featured-playlists: !include schemas/featured-playlists.json
-  - image: !include schemas/image.json
-  - playlist: !include schemas/playlist.json
-  - playlist-simple: !include schemas/playlist-simple.json
-  - playlist-simple-page: !include schemas/playlist-simple-page.json
-  - playlist-snapshot: !include schemas/playlist-snapshot.json
-  - playlist-track: !include schemas/playlist-track.json
-  - playlist-track-page: !include schemas/playlist-track-page.json
-  - track: !include schemas/track.json
-  - track-simple: !include schemas/track-simple.json
-  - track-simple-page: !include schemas/track-simple-page.json
-  - followers: !include schemas/followers.json
-  - user-followed: !include schemas/user-followed.json
-  - user-profile: !include schemas/user-profile.json
-  - current-user-profile: !include schemas/current-user-profile.json
-  - saved-track: !include schemas/saved-track.json
-  - saved-track-page: !include schemas/saved-track-page.json
-  - search: !include schemas/search.json
+/audio-features:
+  displayName: audio-features-several-tracks
+  get:
+    description: |
+      [Get Audio Features for Several Tracks](https://developer.spotify.com/web-api/get-several-audio-features/)
+    securedBy: [ oauth_2_0: { scopes: []}]
+    queryParameters:
+      ids:
+        displayName: Spotify Track IDs
+        type: string
+        description: A comma-separated list of IDs
+        required: true
+        example: '7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B'
+  /{id}:
+    displayName: audio-features-track
+    uriParameters:
+      id:
+        type: string
+        displayName: Spotify Track ID
+        example: 1zHlj4dQ8ZAtrayhuDDmkY
+    get:
+      description: |
+        [Get Audio Features for a Track](https://developer.spotify.com/web-api/get-audio-features/)
+      securedBy: [ oauth_2_0: { scopes: []}]
+/recommendations:
+  displayName: recommendations
+  get:
+    description: |
+      [Get Recommendations Based on Seeds](https://developer.spotify.com/web-api/get-recommendations/)
+    securedBy: [ oauth_2_0: { scopes: []}]
+    queryParameters:
+      limit:
+        type: integer
+        example: 10
+        minimum: 1
+        default: 20
+        maximum: 100
+        required: false
+        displayName: Limit
+        description: The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. Debugging information for such cases is available in the response.
+      market:
+        displayName: Market
+        description: The market (an ISO 3166-1 alpha-2 country code). Because min_*, max_* and target_* are applied to pools before relinking, the generated results may not precisely match the filters applied. Original, non-relinked tracks are available via the linked_from attribute of the relinked track response.
+        type: string
+        example: ES
+        required: false
+      seed_artists:
+        displayName: Spotify Artist ID Seeds
+        type: string
+        description: A comma-separated list of Spotify Artist IDs
+        required: false
+        example: '4NHQUGzhtTLFvgF5SZesLK'
+      seed_genres:
+        displayName: Genres Seeds
+        type: string
+        description: A comma separated list of genres. See the endpoint for fetching the list of genres.
+        required: false
+        example: 'classical,country'
+      seed_tracks:
+        displayName: Spotify Track ID Seeds
+        type: string
+        description: A comma-separated list of Spotify Track IDs
+        required: false
+        example: '0c6xIDDpzE81m2q797ordA'
+      min_acousticness:
+        displayName: Min. Acousticness
+        type: number
+        description: Minimum acousticness
+        required: false
+        minimum: 0
+        maximum: 1
+      max_acousticness:
+        displayName: Max. Acousticness
+        type: number
+        description: Maximum acousticness
+        required: false
+        minimum: 0
+        maximum: 1
+      target_acousticness:
+        displayName: Target Acousticness
+        type: number
+        description: Target acousticness
+        required: false
+        minimum: 0
+        maximum: 1
+      min_danceability:
+        displayName: Min. Danceability
+        type: number
+        description: Minimum danceability
+        required: false
+        minimum: 0
+        maximum: 1
+      max_danceability:
+        displayName: Max. Danceability
+        type: number
+        description: Maximum danceability
+        required: false
+        minimum: 0
+        maximum: 1
+      target_danceability:
+        displayName: Target Danceability
+        type: number
+        description: Target danceability
+        required: false
+        minimum: 0
+        maximum: 1
+      min_duration_ms:
+        displayName: Min. Duration (ms)
+        type: integer
+        description: Minimum duration of the track (ms)
+        required: false
+      max_duration_ms:
+        displayName: Max. Duration (ms)
+        type: integer
+        description: Maximum duration of the track (ms)
+        required: false
+      target_duration_ms:
+        displayName: Target Duration (ms)
+        type: integer
+        description: Target duration of the track (ms)
+        required: false
+      min_energy:
+        displayName: Min. Energy
+        type: number
+        description: Minimum energy
+        required: false
+        minimum: 0
+        maximum: 1
+      max_energy:
+        displayName: Max. Energy
+        type: number
+        description: Maximum energy
+        required: false
+        minimum: 0
+        maximum: 1
+      target_energy:
+        displayName: Target Energy
+        type: number
+        description: Target energy
+        required: false
+        minimum: 0
+        maximum: 1
+      min_instrumentalness:
+        displayName: Min. Instrumentalness
+        type: number
+        description: Minimum instrumentalness
+        required: false
+        minimum: 0
+        maximum: 1
+      max_instrumentalness:
+        displayName: Max. Instrumentalness
+        type: number
+        description: Maximum instrumentalness
+        required: false
+        minimum: 0
+        maximum: 1
+      target_instrumentalness:
+        displayName: Target Instrumentalness
+        type: number
+        description: Target instrumentalness
+        required: false
+        minimum: 0
+        maximum: 1
+      min_key:
+        displayName: Min. Key
+        type: integer
+        description: Minimum key
+        required: false
+        minimum: 0
+        maximym: 11
+      max_key:
+        displayName: Max. Key
+        type: integer
+        description: Maximum key
+        required: false
+        minimum: 0
+        maximym: 11
+      target_key:
+        displayName: Target Key
+        type: integer
+        description: Target key
+        required: false
+        minimum: 0
+        maximym: 11
+      min_liveness:
+        displayName: Min. Liveness
+        type: number
+        description: Minimum liveness
+        required: false
+        minimum: 0
+        maximum: 1
+      max_liveness:
+        displayName: Max. Liveness
+        type: number
+        description: Maximum liveness
+        required: false
+        minimum: 0
+        maximum: 1
+      target_liveness:
+        displayName: Target Liveness
+        type: number
+        description: Target liveness
+        required: false
+        minimum: 0
+        maximum: 1
+      min_loudness:
+        displayName: Min. Loudness
+        type: number
+        description: Minimum loudness
+        required: false
+      max_loudness:
+        displayName: Max. Loudness
+        type: number
+        description: Maximum loudness
+        required: false
+      target_loudness:
+        displayName: Target Loudness
+        type: number
+        description: Target loudness
+        required: false
+      min_mode:
+        displayName: Min. Mode
+        type: integer
+        description: Minimum mode (Major is represented by 1 and minor is 0)
+        required: false
+        minimum: 0
+        maximum: 1
+      max_mode:
+        displayName: Max. Mode
+        type: integer
+        description: Maximum mode (Major is represented by 1 and minor is 0)
+        required: false
+        minimum: 0
+        maximum: 1
+      target_mode:
+        displayName: Target Mode
+        type: integer
+        description: Target mode (Major is represented by 1 and minor is 0)
+        required: false
+        minimum: 0
+        maximum: 1
+      min_popularity:
+        displayName: Min. Popularity
+        type: integer
+        description: Minimum popularity
+        required: false
+        minimum: 0
+        maximum: 100
+      max_popularity:
+        displayName: Max. Popularity
+        type: integer
+        description: Maximum popularity
+        required: false
+        minimum: 0
+        maximum: 100
+      target_popularity:
+        displayName: Target Popularity
+        type: integer
+        description: Target popularity
+        required: false
+        minimum: 0
+        maximum: 100
+      min_speechiness:
+        displayName: Min. Speechiness
+        type: number
+        description: Minimum speechiness
+        required: false
+        minimum: 0
+        maximum: 1
+      max_speechiness:
+        displayName: Max. Speechiness
+        type: number
+        description: Maximum speechiness
+        required: false
+        minimum: 0
+        maximum: 1
+      target_speechiness:
+        displayName: Target Speechiness
+        type: number
+        description: Target speechiness
+        required: false
+        minimum: 0
+        maximum: 1
+      min_tempo:
+        displayName: Min. Tempo
+        type: number
+        description: Minimum tempo (BPM)
+        required: false
+      max_tempo:
+        displayName: Max. Tempo
+        type: number
+        description: Maximum tempo (BPM)
+        required: false
+      target_tempo:
+        displayName: Target Tempo
+        type: number
+        description: Target tempo (BPM)
+        required: false
+      min_time_signature:
+        displayName: Min. Time Signature
+        type: integer
+        description: Minimum time signature
+        required: false
+        maximum: 11
+      max_time_signature:
+        displayName: Max. Time Signature
+        type: integer
+        description: Maximum time signature
+        required: false
+      target_time_signature:
+        displayName: Target Time Signature
+        type: integer
+        description: Target time signature
+        required: false
+      min_valence:
+        displayName: Min. Valence
+        type: number
+        description: Minimum valence
+        required: false
+        minimum: 0
+        maximum: 1
+      max_valence:
+        displayName: Max. Valence
+        type: number
+        description: Maximum valence
+        required: false
+        minimum: 0
+        maximum: 1
+      target_valence:
+        displayName: Target Valence
+        type: number
+        description: Target valence
+        required: false
+        minimum: 0
+        maximum: 1
+  /available-genre-seeds:
+    displayName: available-genre-seeds
+    get:
+      description: |
+        [Get Available Genre Seeds](https://developer.spotify.com/web-api/get-recommendations/#available-genre-seeds)
+      securedBy: [ oauth_2_0: { scopes: []}]
+
