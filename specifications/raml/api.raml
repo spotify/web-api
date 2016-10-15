@@ -830,6 +830,17 @@ traits:
       description: |
         [Get Audio Features for a Track](https://developer.spotify.com/web-api/get-audio-features/)
       securedBy: [ oauth_2_0: { scopes: []}]
+/audio-analysis/{id}:
+  displayName: audio-analysis-track
+  uriParameters:
+      id:
+        type: string
+        displayName: Spotify Track ID
+        example: 1zHlj4dQ8ZAtrayhuDDmkY
+  get:
+    description: |
+      [Get Audio Analysis for a Track](https://developer.spotify.com/web-api/get-audio-analysis/)
+    securedBy: [ oauth_2_0: { scopes: []}]
 /recommendations:
   displayName: recommendations
   get:
