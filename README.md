@@ -6,7 +6,7 @@ The purpose of this repository is to work as the public issue tracker for [Spoti
 We differentiate between *enhancement requests* and *feature requests* in that enhancement requests are improvement of existing features, while feature requests are requests for entirely new features.
 
 ##### Open issues
-[Open bug tickets](https://github.com/spotify/web-api/labels/bug) | [Open feature requests](https://github.com/spotify/web-api/labels/enhancement) | [Open enhancement requests](https://github.com/spotify/web-api/issues?q=enhancement+is:open)
+[Open bug tickets](https://github.com/spotify/web-api/labels/bug) | [Open feature requests](https://github.com/spotify/web-api/issues?q=feature+is%3Aopen+label%3A%22feature+request%22) | [Open enhancement requests](https://github.com/spotify/web-api/issues?q=feature+is%3Aopen+label%3A%22enhancement%22)
 
 **If you want to show your support for an existing feature request, please add a [thumbs up reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments) instead of commenting  "_+1_".** This way the creator of the feature request doesn't get bombarded with notifications.
 
