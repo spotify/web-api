@@ -94,8 +94,6 @@ For Spotify developer-related announcements, follow [@SpotifyPlatform] on Twitte
 [spotify/web-playback-sdk]: https://github.com/spotify/web-playback-sdk/issues
 [spotify/ios-sdk]: https://github.com/spotify/ios-sdk/issues
 [spotify/android-sdk]: https://github.com/spotify/android-sdk/issues
-[spotify/ios-app-remote-sdk]: https://github.com/spotify/ios-app-remote-sdk/issues
-[spotify/android-app-remote-sdk]: https://github.com/spotify/android-app-remote-sdk/issues
 [spotify/android-auth]: https://github.com/spotify/android-auth/issues
 
 [bug]: https://github.com/spotify/web-api/labels/bug
