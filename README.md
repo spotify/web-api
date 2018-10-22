@@ -49,8 +49,6 @@ Unfortunately not; this issue tracker is only for the Spotify Web API. For bugs 
 - [spotify/web-playback-sdk]
 - [spotify/ios-sdk]
 - [spotify/android-sdk]
-- [spotify/ios-app-remote-sdk]
-- [spotify/android-app-remote-sdk]
 - [spotify/android-auth]
 
 #### I have a non-technical issue with Spotify. Is this the right place to post them?
